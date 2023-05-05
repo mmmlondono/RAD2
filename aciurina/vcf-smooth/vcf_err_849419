@@ -1,0 +1,68 @@
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf smooth.snps.vcf
+	--max-alleles 2
+	--freq2
+	--out smooth_alleles
+
+After filtering, kept 30 out of 30 Individuals
+Outputting Frequency Statistics...
+After filtering, kept 60966 out of a possible 60966 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf smooth.snps.vcf
+	--depth
+	--out smooth_depth
+
+After filtering, kept 30 out of 30 Individuals
+Outputting Mean Depth by Individual
+After filtering, kept 60966 out of a possible 60966 Sites
+Run Time = 1.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf smooth.snps.vcf
+	--out smooth_sitedepth
+	--site-mean-depth
+
+After filtering, kept 30 out of 30 Individuals
+Outputting Depth for Each Site
+After filtering, kept 60966 out of a possible 60966 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf smooth.snps.vcf
+	--missing-indv
+	--out smooth_miss_indiv
+
+After filtering, kept 30 out of 30 Individuals
+Outputting Individual Missingness
+After filtering, kept 60966 out of a possible 60966 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf smooth.snps.vcf
+	--out smooth_miss_site
+	--missing-site
+
+After filtering, kept 30 out of 30 Individuals
+Outputting Site Missingness
+After filtering, kept 60966 out of a possible 60966 Sites
+Run Time = 0.00 seconds
+/var/spool/slurm/d/job849419/slurm_script: line 25: /users/mlondono: Is a directory
+/var/spool/slurm/d/job849419/slurm_script: line 26: /users/mlondono: Is a directory

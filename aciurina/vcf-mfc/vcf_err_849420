@@ -1,0 +1,68 @@
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf mfc.snps.vcf
+	--max-alleles 2
+	--freq2
+	--out mfc_alleles
+
+After filtering, kept 48 out of 48 Individuals
+Outputting Frequency Statistics...
+After filtering, kept 47087 out of a possible 47087 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf mfc.snps.vcf
+	--depth
+	--out mfc_depth
+
+After filtering, kept 48 out of 48 Individuals
+Outputting Mean Depth by Individual
+After filtering, kept 47087 out of a possible 47087 Sites
+Run Time = 1.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf mfc.snps.vcf
+	--out mfc_sitedepth
+	--site-mean-depth
+
+After filtering, kept 48 out of 48 Individuals
+Outputting Depth for Each Site
+After filtering, kept 47087 out of a possible 47087 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf mfc.snps.vcf
+	--missing-indv
+	--out mfc_miss_indiv
+
+After filtering, kept 48 out of 48 Individuals
+Outputting Individual Missingness
+After filtering, kept 47087 out of a possible 47087 Sites
+Run Time = 1.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf mfc.snps.vcf
+	--out mfc_miss_site
+	--missing-site
+
+After filtering, kept 48 out of 48 Individuals
+Outputting Site Missingness
+After filtering, kept 47087 out of a possible 47087 Sites
+Run Time = 0.00 seconds
+/var/spool/slurm/d/job849420/slurm_script: line 25: /users/mlondono: Is a directory
+/var/spool/slurm/d/job849420/slurm_script: line 26: /users/mlondono: Is a directory
