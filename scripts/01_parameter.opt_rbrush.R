@@ -60,3 +60,4 @@ ind_miss1  <- read_delim("rbrush/vcf/m7_M3_n3_miss_indiv.imiss", delim = "\t",
 a <- ggplot(ind_miss1, aes(fmiss)) + geom_histogram(fill = "dodgerblue1", colour = "black", alpha = 0.3)
 a + theme_light()
 #most individuals have 0 - 20% missing data but some have over 30% up to ~65%. have to look into those
+
