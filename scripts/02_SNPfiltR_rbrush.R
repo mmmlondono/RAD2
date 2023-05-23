@@ -75,7 +75,7 @@ miss<-assess_missing_data_tsne(vcfR=vcfR, popmap = popmap,
 #>cutoff is specified, filtered vcfR object will be returned
 #1.43% of SNPs fell below a completeness cutoff of 0.75 and were removed from the VCF
 #cutoff is specified, filtered vcfR object will be returned
-#38.65% of SNPs fell below a completeness cutoff of 0.85 and were removed from the VCF
+#38.65% of SNPs fell below a c ompleteness cutoff of 0.85 and were removed from the VCF
 #cutoff is specified, filtered vcfR object will be returned
 #85.85% of SNPs fell below a completeness cutoff of 0.95 and were removed from the VCF
 #choose a cutoff resulting in an acceptable amount of missing data in each sample, and maximizes SNPs retained while minimizing overall missing data, and filter vcf
