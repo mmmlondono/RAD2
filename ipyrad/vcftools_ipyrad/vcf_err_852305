@@ -1,0 +1,67 @@
+/var/spool/slurm/d/job852305/slurm_script: line 14: cd: /export/martinsons/manuela/rbrush/vcf: No such file or directory
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/ipyrad_rbrush/iptest_outfiles/iptest.vcf
+	--max-alleles 2
+	--freq2
+	--out ipy_alleles
+
+After filtering, kept 198 out of 198 Individuals
+Outputting Frequency Statistics...
+After filtering, kept 913977 out of a possible 963177 Sites
+Run Time = 50.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/ipyrad_rbrush/iptest_outfiles/iptest.vcf
+	--depth
+	--out ipy_depth
+
+After filtering, kept 198 out of 198 Individuals
+Outputting Mean Depth by Individual
+After filtering, kept 963177 out of a possible 963177 Sites
+Run Time = 24.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/ipyrad_rbrush/iptest_outfiles/iptest.vcf
+	--out ipy_sitedepth
+	--site-mean-depth
+
+After filtering, kept 198 out of 198 Individuals
+Outputting Depth for Each Site
+After filtering, kept 963177 out of a possible 963177 Sites
+Run Time = 27.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/ipyrad_rbrush/iptest_outfiles/iptest.vcf
+	--missing-indv
+	--out ipy_miss_indiv
+
+After filtering, kept 198 out of 198 Individuals
+Outputting Individual Missingness
+After filtering, kept 963177 out of a possible 963177 Sites
+Run Time = 21.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/ipyrad_rbrush/iptest_outfiles/iptest.vcf
+	--out ipy_miss_site
+	--missing-site
+
+After filtering, kept 198 out of 198 Individuals
+Outputting Site Missingness
+After filtering, kept 963177 out of a possible 963177 Sites
+Run Time = 24.00 seconds
