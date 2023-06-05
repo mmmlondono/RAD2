@@ -11,7 +11,7 @@ library("paletteer")
 #This is run in Rstudio (it being an IDE is especially nice for visualizing)
 #Read in VCF
 rbrush_ref <- read.vcfR("rbrush/reference_based/rbrush_ref90.75.filtered.vcf")
-
+rbrush_ref <- read.vcfR("rbrush_ref60.85.filtered.vcf.gz")
 #Convert to genlight format
 focal_gl <- vcfR2genlight(rbrush_ref)
 #populations map file
@@ -19,6 +19,7 @@ popmap<-data.frame(id=colnames(rbrush_ref@gt)[2:length(colnames(rbrush_ref@gt))]
 #popmap<-read.csv("rbrush/reference_based/popmap.csv")
 #Add population info, setting up the population array
 pop(focal_gl) <- c("_S", "_S", "_S", "_C", "_C", "_C", "_S", "_S", "_S", "_F", "_F", "_F", "_N", "_N", "_N", "_N", "_N", "_N", "_N", "_F", "_F", "_F", "_F", "_F", "_S", "_S", "_S", "_S", "_C", "_C", "_C", "_C", "_C", "_C", "_M", "_M", "_M", "_M", "_M", "_M", "_M", "_N", "_N", "_N", "_N", "_F", "_F", "_F", "_F", "_C", "_C", "_C", "_C", "_C", "_C", "_C", "_G", "_G", "_G", "_G", "_G", "_G", "_S", "_S", "_S", "_S", "_S", "_S", "_X", "_X", "_X", "_X", "_C", "_C", "_C", "_H", "_H", "_H", "_H", "_S", "_S", "_S", "_S", "_S", "_S", "_C", "_C", "_C", "_C", "_C", "_C", "_S", "_S", "_S", "_S", "_S", "_S", "_F", "_M", "_M", "_M", "_M", "_M", "_M", "_M", "_O", "_O", "_O", "_O", "_M", "_M", "_M", "_M", "_M", "_M", "_C", "_C", "_C", "_C", "_C", "_C", "_C", "_M", "_M", "_M", "_M", "_M", "_M", "_N", "_N", "_N", "_N", "_N", "_N", "_S", "_S", "_S", "_S", "_S", "_F", "_F", "_F", "_F", "_F", "_F", "_F", "_F", "_F", "_F", "_F", "_F", "_F", "_F")
+pop(focal_gl) <- c("S", "S", "S", "C", "C", "S", "S", "F", "F", "N", "N", "N", "N", "N", "N", "F", "F", "F", "S", "S", "S", "C", "C", "C", "C", "M", "M", "M", "M", "M", "M", "M", "N", "N", "N", "F", "F", "C", "C", "C", "G", "G", "S", "S", "S", "S", "S", "X", "X", "C", "C", "H", "H", "H", "S", "S", "S", "S", "S", "C", "C", "C", "C", "C", "S", "S", "S", "S", "M", "M", "M", "M", "M", "M", "M", "O", "M", "M", "M", "M", "C", "C", "C", "C", "C", "M", "M", "M", "M", "M", "N", "N", "N", "N", "N", "N", "S", "S", "S", "S", "S", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F")
 #Run PCA
 focal_pca <- glPca(focal_gl, n.cores=4, nf=4)
 #Not really great, but can be helpful for visualizing potentially problematic samples
@@ -65,7 +66,7 @@ popmap$pop=as.factor(popmap$pop)
 plot(x = pca$scores[, 1], y = pca$scores[, 2], col = legend_colors [as.numeric(popmap$pop)], cex = 1, pch = 19)
 
 # Add a legend
-legend("topright", legend = names(legend_colors), fill = legend_colors,
+legend("bottomright", legend = names(legend_colors), fill = legend_colors,
        title = "Population", bty = "n", ncol = 1, box.lwd = 0, box.col = "white", cex = 0.8)
 
 # Plot the second and third principal components

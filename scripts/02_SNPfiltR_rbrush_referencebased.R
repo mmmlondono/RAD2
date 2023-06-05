@@ -45,7 +45,7 @@ vcfR
 missing_by_sample(vcfR=vcfR, popmap = popmap)
 
 #run function to drop samples above the threshold we want from the vcf
-vcfR<-missing_by_sample(vcfR=vcfR, cutoff = .70)
+vcfR<-missing_by_sample(vcfR=vcfR, cutoff = .60)
 
 #subset popmap to only include retained individuals
 popmap<-popmap[popmap$id %in% colnames(vcfR@gt),]
@@ -71,7 +71,7 @@ miss<-assess_missing_data_tsne(vcfR=vcfR, popmap = popmap,
 
 
 #choose a cutoff resulting in an acceptable amount of missing data in each sample, and maximizes SNPs retained while minimizing overall missing data, and filter vcf
-vcfR<-missing_by_snp(vcfR, cutoff = .70)
+vcfR<-missing_by_snp(vcfR, cutoff = .85)
 #>cutoff is specified, filtered vcfR object will be returned
 
 #check how many SNPs and samples are left
@@ -100,8 +100,8 @@ heatmap.bp(gq, rlabels = FALSE)
 
 ####write out vcf files for downstream analyses####
 #write out vcf with all SNPs
-vcfR::write.vcf(vcfR, "rbrush_ref73.70.filtered.vcf.gz")
+vcfR::write.vcf(vcfR, "rbrush_ref60.85.filtered.vcf.gz")
 #linkage filter vcf to thin SNPs to one per 500bp
 vcfR.thin<-distance_thin(vcfR, min.distance = 500)
 #write out thinned vcf
-vcfR::write.vcf(vcfR.thin, "rbrush_ref73.70.thinned.vcf.gz")
+vcfR::write.vcf(vcfR.thin, "rbrush_ref60.85.thinned.vcf.gz")
