@@ -1,0 +1,330 @@
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks1/populations.snps.vcf
+	--max-alleles 2
+	--freq2
+	--out 1_alleles
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Frequency Statistics...
+After filtering, kept 2939 out of a possible 2939 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks1/populations.snps.vcf
+	--depth
+	--out 1_depth
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Mean Depth by Individual
+After filtering, kept 2939 out of a possible 2939 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks1/populations.snps.vcf
+	--out 1_sitedepth
+	--site-mean-depth
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Depth for Each Site
+After filtering, kept 2939 out of a possible 2939 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks1/populations.snps.vcf
+	--missing-indv
+	--out 1_miss_indiv
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Individual Missingness
+After filtering, kept 2939 out of a possible 2939 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks1/populations.snps.vcf
+	--out 1_miss_site
+	--missing-site
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Site Missingness
+After filtering, kept 2939 out of a possible 2939 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks2/populations.snps.vcf
+	--max-alleles 2
+	--freq2
+	--out 2_alleles
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Frequency Statistics...
+After filtering, kept 13137 out of a possible 13137 Sites
+Run Time = 1.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks2/populations.snps.vcf
+	--depth
+	--out 2_depth
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Mean Depth by Individual
+After filtering, kept 13137 out of a possible 13137 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks2/populations.snps.vcf
+	--out 2_sitedepth
+	--site-mean-depth
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Depth for Each Site
+After filtering, kept 13137 out of a possible 13137 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks2/populations.snps.vcf
+	--missing-indv
+	--out 2_miss_indiv
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Individual Missingness
+After filtering, kept 13137 out of a possible 13137 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks2/populations.snps.vcf
+	--out 2_miss_site
+	--missing-site
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Site Missingness
+After filtering, kept 13137 out of a possible 13137 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks4/populations.snps.vcf
+	--max-alleles 2
+	--freq2
+	--out 4_alleles
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Frequency Statistics...
+After filtering, kept 7268 out of a possible 7268 Sites
+Run Time = 2.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks4/populations.snps.vcf
+	--depth
+	--out 4_depth
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Mean Depth by Individual
+After filtering, kept 7268 out of a possible 7268 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks4/populations.snps.vcf
+	--out 4_sitedepth
+	--site-mean-depth
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Depth for Each Site
+After filtering, kept 7268 out of a possible 7268 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks4/populations.snps.vcf
+	--missing-indv
+	--out 4_miss_indiv
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Individual Missingness
+After filtering, kept 7268 out of a possible 7268 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks4/populations.snps.vcf
+	--out 4_miss_site
+	--missing-site
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Site Missingness
+After filtering, kept 7268 out of a possible 7268 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks5/populations.snps.vcf
+	--max-alleles 2
+	--freq2
+	--out 5_alleles
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Frequency Statistics...
+After filtering, kept 31527 out of a possible 31527 Sites
+Run Time = 1.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks5/populations.snps.vcf
+	--depth
+	--out 5_depth
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Mean Depth by Individual
+After filtering, kept 31527 out of a possible 31527 Sites
+Run Time = 1.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks5/populations.snps.vcf
+	--out 5_sitedepth
+	--site-mean-depth
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Depth for Each Site
+After filtering, kept 31527 out of a possible 31527 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks5/populations.snps.vcf
+	--missing-indv
+	--out 5_miss_indiv
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Individual Missingness
+After filtering, kept 31527 out of a possible 31527 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks5/populations.snps.vcf
+	--out 5_miss_site
+	--missing-site
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Site Missingness
+After filtering, kept 31527 out of a possible 31527 Sites
+Run Time = 1.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks6/populations.snps.vcf
+	--max-alleles 2
+	--freq2
+	--out 6_alleles
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Frequency Statistics...
+After filtering, kept 7078 out of a possible 7078 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks6/populations.snps.vcf
+	--depth
+	--out 6_depth
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Mean Depth by Individual
+After filtering, kept 7078 out of a possible 7078 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks6/populations.snps.vcf
+	--out 6_sitedepth
+	--site-mean-depth
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Depth for Each Site
+After filtering, kept 7078 out of a possible 7078 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks6/populations.snps.vcf
+	--missing-indv
+	--out 6_miss_indiv
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Individual Missingness
+After filtering, kept 7078 out of a possible 7078 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /export/martinsons/manuela/cfs_rbrush/stacks6/populations.snps.vcf
+	--out 6_miss_site
+	--missing-site
+
+After filtering, kept 80 out of 80 Individuals
+Outputting Site Missingness
+After filtering, kept 7078 out of a possible 7078 Sites
+Run Time = 1.00 seconds

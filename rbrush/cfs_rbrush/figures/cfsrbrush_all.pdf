@@ -1,0 +1,182 @@
+#NEXUS
+begin taxa;
+	dimensions ntax=80;
+	taxlabels
+	ABQ_EN_S_03
+	ABQ_EN_S_04
+	ABQ_EN_S_07
+	BOU_EN_C_01
+	BOU_EN_C_02
+	BOU_EN_C_03
+	BOU_EN_S_01
+	BOU_EN_S_02
+	BOU_EN_S_03
+	BRG_EN_F_01
+	BRG_EN_F_02
+	BRG_EN_F_03
+	GUN_EN_F_04
+	GUN_EN_F_05
+	GUN_EN_F_07
+	LIM_EN_F_03
+	LIM_EN_F_04
+	LOG_EN_S_01
+	LOG_EN_S_03
+	LOG_EN_S_06
+	LOG_EN_S_07
+	MAL_EN_C_01
+	MAL_EN_C_02
+	MAL_EN_C_03
+	MAL_EN_C_04
+	MAL_EN_C_05
+	MAL_EN_C_06
+	MEE_EN_F_04
+	MEE_EN_F_06
+	MEE_EN_F_07
+	MOB_EN_C_01
+	MOB_EN_C_02
+	MOB_EN_C_03
+	MOB_EN_C_04
+	MOB_EN_C_05
+	MOB_EN_C_07
+	MOB_EN_S_01
+	MOB_EN_S_02
+	MOB_EN_S_04
+	MOB_EN_S_05
+	MOB_EN_S_06
+	MOB_EN_S_07
+	RGG_EN_C_01
+	RGG_EN_C_03
+	RGG_EN_C_04
+	RGG_EN_C_05
+	RGG_EN_C_06
+	RGG_EN_C_07
+	RGG_EN_S_01
+	RGG_EN_S_02
+	RGG_EN_S_04
+	RGG_EN_S_05
+	RGG_EN_S_06
+	RGG_EN_S_07
+	SLV_EN_F_06
+	TES_EN_C_01
+	TES_EN_C_02
+	TES_EN_C_03
+	TES_EN_C_04
+	TES_EN_C_05
+	TES_EN_C_06
+	TES_EN_C_07
+	TES_EN_S_01
+	TES_EN_S_02
+	TES_EN_S_04
+	TES_EN_S_05
+	TES_EN_S_07
+	TRE_EN_F_01
+	TRE_EN_F_02
+	TRE_EN_F_04
+	TRE_EN_F_05
+	TRE_EN_F_06
+	TRE_EN_F_07
+	TRQ_EN_F_01
+	TRQ_EN_F_02
+	TRQ_EN_F_03
+	TRQ_EN_F_04
+	TRQ_EN_F_05
+	TRQ_EN_F_06
+	TRQ_EN_F_07
+;
+end;
+
+begin trees;
+	tree tree_1 = [&R] (TRQ_EN_F_05:4.49E-4,((((((((((((LIM_EN_F_03:0.00128,LIM_EN_F_04:3.26E-4)[&rbrcfs="96.9/100"]:0.003682,(BRG_EN_F_03:6.31E-4,BRG_EN_F_01:0.001396)[&rbrcfs="88.7/96"]:0.001573)[&rbrcfs="74.4/77"]:4.52E-4,(((RGG_EN_C_04:0.002102,(SLV_EN_F_06:0.00199,TRQ_EN_F_03:6.55E-4)[&rbrcfs="77.2/91"]:4.84E-4)[&rbrcfs="72.4/70"]:2.94E-4,(RGG_EN_C_03:0.001119,BOU_EN_C_02:0.001195)[&rbrcfs="76.8/94"]:4.71E-4)[&rbrcfs="0/55"]:2.95E-4,(MOB_EN_C_01:6.26E-4,TES_EN_C_02:2.0E-6)[&rbrcfs="91.9/65"]:0.001204)[&rbrcfs="0/43"]:1.0E-6)[&rbrcfs="0/1"]:2.0E-6,((((MEE_EN_F_06:0.003255,MEE_EN_F_04:0.003738)[&rbrcfs="58.8/82"]:0.001785,MEE_EN_F_07:0.00662)[&rbrcfs="90.7/92"]:0.001545,((RGG_EN_C_05:3.0E-6,TRE_EN_F_07:5.22E-4)[&rbrcfs="90.2/81"]:9.79E-4,(GUN_EN_F_07:9.1E-4,GUN_EN_F_05:2.0E-6)[&rbrcfs="85/96"]:8.84E-4)[&rbrcfs="0/29"]:2.0E-6)[&rbrcfs="0/0"]:1.0E-6,(TRE_EN_F_02:0.001794,((((RGG_EN_C_01:0.001494,MAL_EN_C_01:6.03E-4)[&rbrcfs="0/87"]:1.0E-6,GUN_EN_F_04:0.001504)[&rbrcfs="0/96"]:2.93E-4,MAL_EN_C_03:0.001197)[&rbrcfs="0/14"]:1.0E-6,MAL_EN_C_06:6.32E-4)[&rbrcfs="0/29"]:1.0E-6)[&rbrcfs="0/59"]:1.0E-6)[&rbrcfs="0/0"]:1.0E-6)[&rbrcfs="0/0"]:1.0E-6,((((((((TES_EN_C_03:3.0E-6,LOG_EN_S_01:0.00235)[&rbrcfs="26.2/79"]:3.24E-4,TRQ_EN_F_07:6.35E-4)[&rbrcfs="0/3"]:2.0E-6,RGG_EN_C_06:8.96E-4)[&rbrcfs="0/1"]:2.0E-6,TES_EN_C_07:6.04E-4)[&rbrcfs="0/2"]:2.0E-6,((((TRE_EN_F_01:9.0E-4,MAL_EN_C_05:8.96E-4)[&rbrcfs="0/69"]:2.0E-6,(RGG_EN_C_07:0.00181,TRE_EN_F_04:9.15E-4)[&rbrcfs="78.4/93"]:2.98E-4)[&rbrcfs="0/69"]:2.0E-6,TRE_EN_F_06:0.001507)[&rbrcfs="0/34"]:2.0E-6,BOU_EN_C_01:0.002692)[&rbrcfs="0/29"]:2.91E-4)[&rbrcfs="0/0"]:1.0E-6,(MAL_EN_C_04:0.001192,(((MOB_EN_S_05:0.001419,MOB_EN_S_04:0.002144)[&rbrcfs="87.5/98"]:0.001616,MOB_EN_S_02:0.002081)[&rbrcfs="78.6/88"]:4.85E-4,(MOB_EN_S_06:0.001703,MOB_EN_S_01:0.001762)[&rbrcfs="19.9/63"]:4.98E-4)[&rbrcfs="87.2/94"]:6.66E-4)[&rbrcfs="0/27"]:2.0E-6)[&rbrcfs="0/0"]:2.0E-6,((LOG_EN_S_07:0.00302,(((((BOU_EN_S_01:2.99E-4,TES_EN_S_04:1.0E-6)[&rbrcfs="0/91"]:2.95E-4,BOU_EN_S_02:9.21E-4)[&rbrcfs="0/51"]:1.0E-6,LOG_EN_S_03:5.99E-4)[&rbrcfs="0/71"]:1.0E-6,TES_EN_S_05:2.99E-4)[&rbrcfs="0/16"]:2.0E-6,(((TES_EN_S_01:1.0E-6,(ABQ_EN_S_04:3.59E-4,(ABQ_EN_S_07:2.0E-6,BOU_EN_C_03:1.0E-6)[&rbrcfs="0/85"]:2.0E-6)[&rbrcfs="89.2/100"]:0.001423)[&rbrcfs="0/44"]:2.0E-6,((TES_EN_S_02:2.0E-6,TES_EN_S_07:2.0E-6)[&rbrcfs="91.4/73"]:8.86E-4,RGG_EN_S_01:1.0E-6)[&rbrcfs="0/35"]:2.0E-6)[&rbrcfs="0/42"]:2.0E-6,(((RGG_EN_S_05:0.001193,RGG_EN_S_07:3.01E-4)[&rbrcfs="0/15"]:2.0E-6,BOU_EN_S_03:0.00112)[&rbrcfs="0/6"]:2.0E-6,RGG_EN_S_04:1.0E-6)[&rbrcfs="85.4/52"]:3.7E-4)[&rbrcfs="74.9/48"]:2.96E-4)[&rbrcfs="92.6/98"]:8.89E-4)[&rbrcfs="0/57"]:2.94E-4,(RGG_EN_S_02:0.002711,LOG_EN_S_06:0.002728)[&rbrcfs="75.4/64"]:3.7E-4)[&rbrcfs="0/66"]:1.0E-6)[&rbrcfs="0/0"]:1.0E-6,(MOB_EN_S_07:2.0E-6,TES_EN_C_04:8.24E-4)[&rbrcfs="77.3/31"]:3.91E-4)[&rbrcfs="0/0"]:1.0E-6)[&rbrcfs="0/11"]:1.0E-6,(((MOB_EN_C_02:0.001556,MOB_EN_C_04:0.001051)[&rbrcfs="89.3/93"]:0.001301,((((ABQ_EN_S_03:0.011765,TRQ_EN_F_02:0.006418)[&rbrcfs="100/100"]:0.022984,MOB_EN_C_07:0.016913)[&rbrcfs="100/100"]:0.016332,MOB_EN_C_05:5.98E-4)[&rbrcfs="0/59"]:3.0E-6,MOB_EN_C_03:0.001108)[&rbrcfs="73.9/69"]:5.78E-4)[&rbrcfs="80.1/81"]:4.22E-4,TRQ_EN_F_01:0.001794)[&rbrcfs="0/8"]:2.0E-6)[&rbrcfs="0/34"]:1.0E-6,((TES_EN_C_01:8.92E-4,TES_EN_C_05:0.001432)[&rbrcfs="0/71"]:2.0E-6,TES_EN_C_06:5.97E-4)[&rbrcfs="43.4/66"]:3.55E-4)[&rbrcfs="0/35"]:2.41E-4,MAL_EN_C_02:0.001196)[&rbrcfs="0/8"]:2.0E-6,RGG_EN_S_06:1.0E-6)[&rbrcfs="0/47"]:5.1E-5,TRE_EN_F_05:2.98E-4)[&rbrcfs="45.9/63"]:2.96E-4,BRG_EN_F_02:2.0E-6)[&rbrcfs="0/57"]:3.0E-6,TRQ_EN_F_06:0.002404)[&rbrcfs="20/54"]:4.44E-4,TRQ_EN_F_04:6.07E-4);
+end;
+
+begin figtree;
+	set appearance.backgroundColorAttribute="Default";
+	set appearance.backgroundColour=#ffffff;
+	set appearance.branchColorAttribute="User selection";
+	set appearance.branchColorGradient=false;
+	set appearance.branchLineWidth=1.0;
+	set appearance.branchMinLineWidth=0.0;
+	set appearance.branchWidthAttribute="Fixed";
+	set appearance.foregroundColour=#000000;
+	set appearance.hilightingGradient=false;
+	set appearance.selectionColour=#2d3680;
+	set branchLabels.colorAttribute="User selection";
+	set branchLabels.displayAttribute="rbrcfs";
+	set branchLabels.fontName="sansserif";
+	set branchLabels.fontSize=8;
+	set branchLabels.fontStyle=0;
+	set branchLabels.isShown=true;
+	set branchLabels.significantDigits=4;
+	set layout.expansion=0;
+	set layout.layoutType="RECTILINEAR";
+	set layout.zoom=0;
+	set legend.attribute=null;
+	set legend.fontSize=10.0;
+	set legend.isShown=false;
+	set legend.significantDigits=4;
+	set nodeBars.barWidth=4.0;
+	set nodeBars.displayAttribute=null;
+	set nodeBars.isShown=false;
+	set nodeLabels.colorAttribute="User selection";
+	set nodeLabels.displayAttribute="Node ages";
+	set nodeLabels.fontName="sansserif";
+	set nodeLabels.fontSize=8;
+	set nodeLabels.fontStyle=0;
+	set nodeLabels.isShown=false;
+	set nodeLabels.significantDigits=4;
+	set nodeShapeExternal.colourAttribute=null;
+	set nodeShapeExternal.isShown=false;
+	set nodeShapeExternal.minSize=10.0;
+	set nodeShapeExternal.scaleType=Width;
+	set nodeShapeExternal.shapeType=Circle;
+	set nodeShapeExternal.size=4.0;
+	set nodeShapeExternal.sizeAttribute=null;
+	set nodeShapeInternal.colourAttribute=null;
+	set nodeShapeInternal.isShown=false;
+	set nodeShapeInternal.minSize=10.0;
+	set nodeShapeInternal.scaleType=Width;
+	set nodeShapeInternal.shapeType=Circle;
+	set nodeShapeInternal.size=4.0;
+	set nodeShapeInternal.sizeAttribute=null;
+	set polarLayout.alignTipLabels=false;
+	set polarLayout.angularRange=0;
+	set polarLayout.rootAngle=0;
+	set polarLayout.rootLength=100;
+	set polarLayout.showRoot=true;
+	set radialLayout.spread=0.0;
+	set rectilinearLayout.alignTipLabels=false;
+	set rectilinearLayout.curvature=0;
+	set rectilinearLayout.rootLength=100;
+	set scale.offsetAge=0.0;
+	set scale.rootAge=1.0;
+	set scale.scaleFactor=1.0;
+	set scale.scaleRoot=false;
+	set scaleAxis.automaticScale=true;
+	set scaleAxis.fontSize=8.0;
+	set scaleAxis.isShown=false;
+	set scaleAxis.lineWidth=1.0;
+	set scaleAxis.majorTicks=1.0;
+	set scaleAxis.minorTicks=0.5;
+	set scaleAxis.origin=0.0;
+	set scaleAxis.reverseAxis=false;
+	set scaleAxis.showGrid=true;
+	set scaleBar.automaticScale=true;
+	set scaleBar.fontSize=10.0;
+	set scaleBar.isShown=true;
+	set scaleBar.lineWidth=1.0;
+	set scaleBar.scaleRange=0.0;
+	set tipLabels.colorAttribute="User selection";
+	set tipLabels.displayAttribute="Names";
+	set tipLabels.fontName="sansserif";
+	set tipLabels.fontSize=8;
+	set tipLabels.fontStyle=0;
+	set tipLabels.isShown=true;
+	set tipLabels.significantDigits=4;
+	set trees.order=false;
+	set trees.orderType="increasing";
+	set trees.rooting=true;
+	set trees.rootingType="User Selection";
+	set trees.transform=false;
+	set trees.transformType="cladogram";
+end;
+

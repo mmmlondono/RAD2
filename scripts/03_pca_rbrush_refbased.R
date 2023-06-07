@@ -52,6 +52,9 @@ legend_colors <- c("#A0CBE8", "#F28E2B","#8CD17D","#F1CE63", "#499894",
                             
 legend_colors <- c("#4E79A7", "#F28E2B","#59A14F","#B6992D", "#499894",
                             "#79706E","#D37295", "#B07AA1" , "#D7B5A6")
+                            
+legend_colors <- c("#0079bf", "#d29034","#838c91","#b04632", "#89609e",
+                            "#cd5a91","#1e663b", "#8CD17D" , "#D7B5A6")
 #paletteer_d("ggthemes::Tableau_x")
 
 legend_colors <- paletteer_d("ggthemes::Miller_Stone")
