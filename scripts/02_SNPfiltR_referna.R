@@ -1,5 +1,5 @@
 ####READ ME####
-# The purpose of this script is to run SNPfiltR protocol
+# The purpose of this script is to run SNPfiltR protocol for aciurina mfc subset
 ####libraries####
 library(SNPfiltR)
 library(devtools)
@@ -9,11 +9,11 @@ library("vcfR")
 
 ####Read in files####
 #VCF file
-vcfR <- read.vcfR("rbrush/reference_based/populations.snps.vcf")
+vcfR <- read.vcfR("rbrush/erna/populations_ref.snps.vcf")
 
 #populations map file
-popmap<-data.frame(id=colnames(vcfR@gt)[2:length(colnames(vcfR@gt))],pop=substr(colnames(vcfR@gt)[2:length(colnames(vcfR@gt))], 7,8))
-
+#popmap<-data.frame(id=colnames(vcfR@gt)[2:length(colnames(vcfR@gt))],pop=substr(colnames(vcfR@gt)[2:length(colnames(vcfR@gt))], 7,8))
+popmap <- read.csv("rbrush/erna/popmap.csv")
 
 ####Implement quality filters####
 #that don’t involve missing data This is because removing low data samples will alter percentage/quantile based missing data cutoffs, so we wait to implement those until after deciding on our final set of samples for downstream analysis
@@ -71,7 +71,7 @@ miss<-assess_missing_data_tsne(vcfR=vcfR, popmap = popmap,
 
 
 #choose a cutoff resulting in an acceptable amount of missing data in each sample, and maximizes SNPs retained while minimizing overall missing data, and filter vcf
-vcfR<-missing_by_snp(vcfR, cutoff = .85)
+vcfR<-missing_by_snp(vcfR, cutoff = .75)
 #>cutoff is specified, filtered vcfR object will be returned
 
 #check how many SNPs and samples are left
