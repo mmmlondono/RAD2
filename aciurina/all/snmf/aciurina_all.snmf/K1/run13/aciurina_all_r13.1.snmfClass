@@ -1,0 +1,6 @@
+new("snmfClass", directory = "K1/run13/", snmfClass.file = "aciurina_all_r13.1.snmfClass", 
+    K = 1L, run = 13L, CPU = 1L, seed = 721585773L, alpha = 10, 
+    percentage = 0.05, I = 0L, iterations = 200L, entropy = TRUE, 
+    tolerance = 1e-05, crossEntropy = 0.267760599556039, ploidy = 2L, 
+    Q.input.file = "", Q.output.file = "aciurina_all_r13.1.Q", 
+    G.output.file = "aciurina_all_r13.1.G")

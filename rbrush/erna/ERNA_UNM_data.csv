@@ -1,0 +1,151 @@
+"Pop","ID","All","Name","Lat","Long","State","Elevation","Variety","Ssp","Lin","Anc"
+"AR",2,"EN_AR_2","Arenaria1",37.17384,-112.61817,"UT",1870,"arenaria","consimilis","green",0.963931
+"AR",3,"EN_AR_3","Arenaria1",37.17384,-112.61817,"UT",1870,"arenaria","consimilis","green",0.968045
+"AR",4,"EN_AR_4","Arenaria1",37.17384,-112.61817,"UT",1870,"arenaria","consimilis","green",0.986349
+"AR",5,"EN_AR_5","Arenaria1",37.17384,-112.61817,"UT",1870,"arenaria","consimilis","green",0.951423
+"AR",6,"EN_AR_6","Arenaria1",37.17384,-112.61817,"UT",1870,"arenaria","consimilis","green",0.971685
+"BC",10,"EN_BC_10","beaver canyon",38.27982,-112.56807,"UT",1887,"salicifolia","nauseosa","green",0.999917
+"BC",11,"EN_BC_11","beaver canyon",38.27982,-112.56807,"UT",1887,"salicifolia","nauseosa","green",0.999906
+"BC",12,"EN_BC_12","beaver canyon",38.27982,-112.56807,"UT",1887,"salicifolia","nauseosa","green",0.999912
+"BC",13,"EN_BC_13","beaver canyon",38.27982,-112.56807,"UT",1887,"salicifolia","nauseosa","green",0.999904
+"BC",1,"EN_BC_1","beaver canyon",38.27982,-112.56807,"UT",1887,"salicifolia","nauseosa","hybrid",0.242527
+"BC",2,"EN_BC_2","beaver canyon",38.27982,-112.56807,"UT",1887,"salicifolia","nauseosa","hybrid",0.245674
+"BC",3,"EN_BC_3","beaver canyon",38.27982,-112.56807,"UT",1887,"salicifolia","nauseosa","hybrid",0.24054
+"BC",4,"EN_BC_4","beaver canyon",38.27982,-112.56807,"UT",1887,"salicifolia","nauseosa","hybrid",0.251306
+"BC",5,"EN_BC_5","beaver canyon",38.27982,-112.56807,"UT",1887,"salicifolia","nauseosa","hybrid",0.252906
+"BC",6,"EN_BC_6","beaver canyon",38.27982,-112.56807,"UT",1887,"salicifolia","nauseosa","hybrid",0.236733
+"BC",7,"EN_BC_7","beaver canyon",38.27982,-112.56807,"UT",1887,"salicifolia","nauseosa","green",0.999931
+"BC",8,"EN_BC_8","beaver canyon",38.27982,-112.56807,"UT",1887,"salicifolia","nauseosa","green",0.999823
+"BC",9,"EN_BC_9","beaver canyon",38.27982,-112.56807,"UT",1887,"salicifolia","nauseosa","green",0.999898
+"BO",1,"EN_BO_1","bud 1",39.14467,-111.75611,"UT",1631,"iridis","nauseosa","green",0.939427
+"BO",2,"EN_BO_2","bud 1",39.14467,-111.75611,"UT",1631,"iridis","nauseosa","green",0.987308
+"BO",3,"EN_BO_3","bud 1",39.14467,-111.75611,"UT",1631,"iridis","nauseosa","green",0.948214
+"BO",4,"EN_BO_4","bud 1",39.14467,-111.75611,"UT",1631,"iridis","nauseosa","green",0.935122
+"BO",5,"EN_BO_5","bud 1",39.14467,-111.75611,"UT",1631,"iridis","nauseosa","green",0.948119
+"BO",6,"EN_BO_6","bud 1",39.14467,-111.75611,"UT",1631,"iridis","nauseosa","green",0.956545
+"BT",1,"EN_BT_1","bud 2",39.02786,-111.74611,"UT",1711,"oreophila","consimilis","green",0.999777
+"BT",2,"EN_BT_2","bud 2",39.02786,-111.74611,"UT",1711,"oreophila","consimilis","green",0.999757
+"BT",3,"EN_BT_3","bud 2",39.02786,-111.74611,"UT",1711,"oreophila","consimilis","green",0.999644
+"BT",4,"EN_BT_4","bud 2",39.02786,-111.74611,"UT",1711,"oreophila","consimilis","green",0.999817
+"BT",5,"EN_BT_5","bud 2",39.02786,-111.74611,"UT",1711,"oreophila","consimilis","green",0.99965
+"BT",6,"EN_BT_6","bud 2",39.02786,-111.74611,"UT",1711,"oreophila","consimilis","green",0.999816
+"CI",1,"EN_CI_1","city",37.11173,-113.56686,"UT",888,"graveolens","nauseosa","green",0.99991
+"CI",2,"EN_CI_2","city",37.11173,-113.56686,"UT",888,"graveolens","nauseosa","green",0.99991
+"CI",3,"EN_CI_3","city",37.11173,-113.56686,"UT",888,"graveolens","nauseosa","green",0.999913
+"CI",4,"EN_CI_4","city",37.11173,-113.56686,"UT",888,"graveolens","nauseosa","green",0.999932
+"CI",5,"EN_CI_5","city",37.11173,-113.56686,"UT",888,"graveolens","nauseosa","green",0.999914
+"CS",1,"EN_CS_1","CP3-69",37.04314,-112.19856,"UT",1647,"unknown","unknown","green",0.999918
+"CS",2,"EN_CS_2","CP3-69",37.04314,-112.19856,"UT",1647,"unknown","unknown","green",0.999916
+"CS",3,"EN_CS_3","CP3-69",37.04314,-112.19856,"UT",1647,"unknown","unknown","green",0.999931
+"CS",4,"EN_CS_4","CP3-69",37.04314,-112.19856,"UT",1647,"unknown","unknown","green",0.999898
+"CS",5,"EN_CS_5","CP3-69",37.04314,-112.19856,"UT",1647,"unknown","unknown","green",0.999908
+"CS",6,"EN_CS_6","CP3-69",37.04314,-112.19856,"UT",1647,"unknown","unknown","green",0.999933
+"CV",1,"EN_CV_1","CP3-70",37.76715,-113.16933,"UT",1758,"unknown","unknown","hybrid",0.240608
+"CV",2,"EN_CV_2","CP3-70",37.76715,-113.16933,"UT",1758,"unknown","unknown","hybrid",0.23054
+"CV",3,"EN_CV_3","CP3-70",37.76715,-113.16933,"UT",1758,"unknown","unknown","hybrid",0.205041
+"CV",4,"EN_CV_4","CP3-70",37.76715,-113.16933,"UT",1758,"unknown","unknown","hybrid",0.221145
+"CV",5,"EN_CV_5","CP3-70",37.76715,-113.16933,"UT",1758,"unknown","unknown","hybrid",0.232532
+"CV",6,"EN_CV_6","CP3-70",37.76715,-113.16933,"UT",1758,"unknown","unknown","hybrid",0.235773
+"DM",1,"EN_DM_1","7-17-17 Death by Mosquito",39.73112,-111.15585,"UT",2352,"unknown","unknown","green",0.997373
+"DM",3,"EN_DM_3","7-17-17 Death by Mosquito",39.73112,-111.15585,"UT",2352,"unknown","unknown","green",0.999089
+"DM",4,"EN_DM_4","7-17-17 Death by Mosquito",39.73112,-111.15585,"UT",2352,"unknown","unknown","green",0.999174
+"DM",5,"EN_DM_5","7-17-17 Death by Mosquito",39.73112,-111.15585,"UT",2352,"unknown","unknown","green",0.999547
+"GO",1,"EN_GO_1","Gallup Oreos",35.50509,-108.82932,"NM",1977,"oreophila","consimilis","green",0.999893
+"GO",2,"EN_GO_2","Gallup Oreos",35.50509,-108.82932,"NM",1977,"oreophila","consimilis","green",0.999813
+"GO",3,"EN_GO_3","Gallup Oreos",35.50509,-108.82932,"NM",1977,"oreophila","consimilis","green",0.999895
+"GO",4,"EN_GO_4","Gallup Oreos",35.50509,-108.82932,"NM",1977,"oreophila","consimilis","green",0.999805
+"GO",5,"EN_GO_5","Gallup Oreos",35.50509,-108.82932,"NM",1977,"oreophila","consimilis","green",0.999702
+"GO",6,"EN_GO_6","Gallup Oreos",35.50509,-108.82932,"NM",1977,"oreophila","consimilis","green",0.999827
+"HL",1,"EN_HL_1","7-17-17 hololeuca",39.99726,-111.31432,"UT",1987,"hololeuca","nauseosa","hybrid",0.343591
+"HL",2,"EN_HL_2","7-17-17 hololeuca",39.99726,-111.31432,"UT",1987,"hololeuca","nauseosa","hybrid",0.449011
+"HL",3,"EN_HL_3","7-17-17 hololeuca",39.99726,-111.31432,"UT",1987,"hololeuca","nauseosa","hybrid",0.334653
+"HL",4,"EN_HL_4","7-17-17 hololeuca",39.99726,-111.31432,"UT",1987,"hololeuca","nauseosa","hybrid",0.677203
+"HL",5,"EN_HL_5","7-17-17 hololeuca",39.99726,-111.31432,"UT",1987,"hololeuca","nauseosa","hybrid",0.673123
+"JO",2,"EN_JO_2","Juncea1",36.9954,-111.5949,"UT",1249,"juncea","consimilis","green",0.908082
+"JO",3,"EN_JO_3","Juncea1",36.9954,-111.5949,"UT",1249,"juncea","consimilis","green",0.87474
+"JO",4,"EN_JO_4","Juncea1",36.9954,-111.5949,"UT",1249,"juncea","consimilis","green",0.87851
+"JO",5,"EN_JO_5","Juncea1",36.9954,-111.5949,"UT",1249,"juncea","consimilis","green",0.898221
+"JO",6,"EN_JO_6","Juncea1",36.9954,-111.5949,"UT",1249,"juncea","consimilis","green",0.908556
+"JT",1,"EN_JT_1","Juncea2",35.90452,-111.54766,"AZ",1504,"juncea","consimilis","green",0.899346
+"JT",2,"EN_JT_2","Juncea2",35.90452,-111.54766,"AZ",1504,"juncea","consimilis","green",0.888066
+"JT",3,"EN_JT_3","Juncea2",35.90452,-111.54766,"AZ",1504,"juncea","consimilis","green",0.881571
+"JT",4,"EN_JT_4","Juncea2",35.90452,-111.54766,"AZ",1504,"juncea","consimilis","green",0.883935
+"JT",5,"EN_JT_5","Juncea2",35.90452,-111.54766,"AZ",1504,"juncea","consimilis","green",0.890941
+"JT",6,"EN_JT_6","Juncea2",35.90452,-111.54766,"AZ",1504,"juncea","consimilis","green",0.889075
+"LA",1,"EN_LA_1","latisquamea",35.20589,-106.49663,"NM",1906,"latisquamea","nauseosa","hybrid",0.377497
+"LA",2,"EN_LA_2","latisquamea",35.20589,-106.49663,"NM",1906,"latisquamea","nauseosa","hybrid",0.383122
+"LA",3,"EN_LA_3","latisquamea",35.20589,-106.49663,"NM",1906,"latisquamea","nauseosa","hybrid",0.397185
+"LA",4,"EN_LA_4","latisquamea",35.20589,-106.49663,"NM",1906,"latisquamea","nauseosa","hybrid",0.390976
+"LA",5,"EN_LA_5","latisquamea",35.20589,-106.49663,"NM",1906,"latisquamea","nauseosa","hybrid",0.378033
+"LA",6,"EN_LA_6","latisquamea",35.20589,-106.49663,"NM",1906,"latisquamea","nauseosa","hybrid",0.378963
+"LO",1,"EN_LO_1","bigelovii1",35.03251,-110.6452,"AZ",1487,"bigelovii","nauseosa","green",0.990253
+"LO",2,"EN_LO_2","bigelovii1",35.03251,-110.6452,"AZ",1487,"bigelovii","nauseosa","green",0.999308
+"LO",3,"EN_LO_3","bigelovii1",35.03251,-110.6452,"AZ",1487,"bigelovii","nauseosa","green",0.996201
+"LO",4,"EN_LO_4","bigelovii1",35.03251,-110.6452,"AZ",1487,"bigelovii","nauseosa","green",0.993253
+"LO",5,"EN_LO_5","bigelovii1",35.03251,-110.6452,"AZ",1487,"bigelovii","nauseosa","green",0.988985
+"LT",4,"EN_LT_4","bigelovii2",34.99441,-107.30143,"NM",815,"bigelovii","nauseosa","green",0.985216
+"LT",5,"EN_LT_5","bigelovii2",34.99441,-107.30143,"NM",815,"bigelovii","nauseosa","green",0.982375
+"LT",6,"EN_LT_6","bigelovii2",34.99441,-107.30143,"NM",815,"bigelovii","nauseosa","green",0.975623
+"NI",1,"EN_NI_1","Nitida1",35.95807,-111.76713,"AZ",1935,"nitida","consimilis","green",0.999918
+"NI",2,"EN_NI_2","Nitida1",35.95807,-111.76713,"AZ",1935,"nitida","consimilis","green",0.999845
+"NI",3,"EN_NI_3","Nitida1",35.95807,-111.76713,"AZ",1935,"nitida","consimilis","green",0.999905
+"NI",4,"EN_NI_4","Nitida1",35.95807,-111.76713,"AZ",1935,"nitida","consimilis","green",0.999899
+"NI",5,"EN_NI_5","Nitida1",35.95807,-111.76713,"AZ",1935,"nitida","consimilis","green",0.999911
+"NI",6,"EN_NI_6","Nitida1",35.95807,-111.76713,"AZ",1935,"nitida","consimilis","green",0.999911
+"OO",1,"EN_OO_1","not bud 1",38.57794,-112.33389,"UT",1789,"hololeuca","nauseosa","hybrid",0.238473
+"OO",2,"EN_OO_2","not bud 1",38.57794,-112.33389,"UT",1789,"hololeuca","nauseosa","hybrid",0.234635
+"OO",3,"EN_OO_3","not bud 1",38.57794,-112.33389,"UT",1789,"hololeuca","nauseosa","hybrid",0.289165
+"OO",4,"EN_OO_4","not bud 1",38.57794,-112.33389,"UT",1789,"hololeuca","nauseosa","hybrid",0.275399
+"OO",5,"EN_OO_5","not bud 1",38.57794,-112.33389,"UT",1789,"hololeuca","nauseosa","hybrid",0.688872
+"OO",6,"EN_OO_6","not bud 1",38.57794,-112.33389,"UT",1789,"hololeuca","nauseosa","hybrid",0.406928
+"OT",1,"EN_OT_1","not bud 2",38.71723,-112.3746,"UT",1914,"salicifolia","nauseosa","green",0.894672
+"OT",2,"EN_OT_2","not bud 2",38.71723,-112.3746,"UT",1914,"salicifolia","nauseosa","green",0.919321
+"OT",3,"EN_OT_3","not bud 2",38.71723,-112.3746,"UT",1914,"salicifolia","nauseosa","green",0.872864
+"OT",4,"EN_OT_4","not bud 2",38.71723,-112.3746,"UT",1914,"salicifolia","nauseosa","green",0.898254
+"RS",1,"EN_RS_1","rest stop green",37.51538,-113.2111,"UT",1628,"graveolens","nauseosa","green",0.999912
+"RS",2,"EN_RS_2","rest stop green",37.51538,-113.2111,"UT",1628,"graveolens","nauseosa","green",0.99987
+"RS",4,"EN_RS_4","rest stop green",37.51538,-113.2111,"UT",1628,"graveolens","nauseosa","green",0.999879
+"RS",5,"EN_RS_5","rest stop green",37.51538,-113.2111,"UT",1628,"graveolens","nauseosa","green",0.999923
+"RS",6,"EN_RS_6","rest stop green",37.51538,-113.2111,"UT",1628,"graveolens","nauseosa","green",0.999885
+"RS",7,"EN_RS_7","rest stop green",37.51538,-113.2111,"UT",1628,"graveolens","nauseosa","green",0.999871
+"ST",10,"EN_ST_10","Snake John Turbinata",40.237306,-109.08544,"UT",1727,"turbinata","nauseosa","green",0.999691
+"ST",11,"EN_ST_11","Snake John Turbinata",40.237306,-109.08544,"UT",1727,"turbinata","nauseosa","green",0.9995
+"ST",12,"EN_ST_12","Snake John Turbinata",40.237306,-109.08544,"UT",1727,"turbinata","nauseosa","green",0.999642
+"SJ",1,"EN_SJ_1","Snake John Wash",40.237306,-109.08544,"UT",1727,"unknown","unknown","green",0.99919
+"SJ",2,"EN_SJ_2","Snake John Wash",40.237306,-109.08544,"UT",1727,"unknown","unknown","green",0.999501
+"SJ",3,"EN_SJ_3","Snake John Wash",40.237306,-109.08544,"UT",1727,"unknown","unknown","green",0.999328
+"SJ",4,"EN_SJ_4","Snake John Wash",40.237306,-109.08544,"UT",1727,"unknown","unknown","green",0.996428
+"SJ",5,"EN_SJ_5","Snake John Wash",40.237306,-109.08544,"UT",1727,"unknown","unknown","green",0.999613
+"SJ",6,"EN_SJ_6","Snake John Wash",40.237306,-109.08544,"UT",1727,"unknown","unknown","green",0.99984
+"ST",7,"EN_ST_7","Snake John Turbinata",40.237306,-109.08544,"UT",1727,"turbinata","nauseosa","green",0.999706
+"ST",8,"EN_ST_8","Snake John Turbinata",40.237306,-109.08544,"UT",1727,"turbinata","nauseosa","green",0.999715
+"ST",9,"EN_ST_9","Snake John Turbinata",40.237306,-109.08544,"UT",1727,"turbinata","nauseosa","green",0.999657
+"SL",2,"EN_SL_2","Speed Limit 19",35.21852,-111.64226,"AZ",2140,"unknown","unknown","green",0.999858
+"SL",3,"EN_SL_3","Speed Limit 19",35.21852,-111.64226,"AZ",2140,"unknown","unknown","green",0.999838
+"SL",4,"EN_SL_4","Speed Limit 19",35.21852,-111.64226,"AZ",2140,"unknown","unknown","green",0.999901
+"SL",5,"EN_SL_5","Speed Limit 19",35.21852,-111.64226,"AZ",2140,"unknown","unknown","green",0.999899
+"SL",6,"EN_SL_6","Speed Limit 19",35.21852,-111.64226,"AZ",2140,"unknown","unknown","green",0.999903
+"TO",1,"EN_TO_1","toquerville",37.28252,-113.30629,"UT",1159,"salicifolia","nauseosa","hybrid",0.239336
+"TO",2,"EN_TO_2","toquerville",37.28252,-113.30629,"UT",1159,"salicifolia","nauseosa","hybrid",0.234238
+"TO",3,"EN_TO_3","toquerville",37.28252,-113.30629,"UT",1159,"salicifolia","nauseosa","hybrid",0.248831
+"TO",4,"EN_TO_4","toquerville",37.28252,-113.30629,"UT",1159,"salicifolia","nauseosa","hybrid",0.225515
+"TO",5,"EN_TO_5","toquerville",37.28252,-113.30629,"UT",1159,"salicifolia","nauseosa","hybrid",0.244465
+"TO",6,"EN_TO_6","toquerville",37.28252,-113.30629,"UT",1159,"salicifolia","nauseosa","hybrid",0.243232
+"TU",1,"EN_TU_1","tunnel",37.22645,-113.37766,"UT",1004,"unknown","unknown","green",0.999925
+"TU",2,"EN_TU_2","tunnel",37.22645,-113.37766,"UT",1004,"unknown","unknown","green",0.99987
+"TU",3,"EN_TU_3","tunnel",37.22645,-113.37766,"UT",1004,"unknown","unknown","green",0.999923
+"TU",4,"EN_TU_4","tunnel",37.22645,-113.37766,"UT",1004,"unknown","unknown","green",0.999914
+"TU",5,"EN_TU_5","tunnel",37.22645,-113.37766,"UT",1004,"unknown","unknown","green",0.999921
+"TU",6,"EN_TU_6","tunnel",37.22645,-113.37766,"UT",1004,"unknown","unknown","green",0.999915
+"TU",7,"EN_TU_7","tunnel",37.22645,-113.37766,"UT",1004,"unknown","unknown","green",0.999913
+"UN",1,"EN_UN_1","Unknown 1",37.11617,-111.97725,"UT",1447,"unknown","unknown","hybrid",0.280255
+"UN",2,"EN_UN_2","Unknown 1",37.11617,-111.97725,"UT",1447,"unknown","unknown","hybrid",0.304604
+"UO",1,"EN_UO_1","UT1",39.08505,-113.50959,"UT",1438,"speciosa","nauseosa","hybrid",0.18964
+"UO",3,"EN_UO_3","UT1",39.08505,-113.50959,"UT",1438,"speciosa","nauseosa","hybrid",0.217885
+"UO",4,"EN_UO_4","UT1",39.08505,-113.50959,"UT",1438,"speciosa","nauseosa","hybrid",0.195704
+"UO",5,"EN_UO_5","UT1",39.08505,-113.50959,"UT",1438,"speciosa","nauseosa","hybrid",0.210715
+"UT",1,"EN_UT_1","UT2",39.07335,-113.71999,"UT",1671,"turbinata","nauseosa","green",0.999512
+"UT",2,"EN_UT_2","UT2",39.07335,-113.71999,"UT",1671,"turbinata","nauseosa","green",0.999417
+"UT",3,"EN_UT_3","UT2",39.07335,-113.71999,"UT",1671,"turbinata","nauseosa","green",0.999727
+"UT",4,"EN_UT_4","UT2",39.07335,-113.71999,"UT",1671,"turbinata","nauseosa","green",0.999626
+"UT",5,"EN_UT_5","UT2",39.07335,-113.71999,"UT",1671,"turbinata","nauseosa","green",0.99946
