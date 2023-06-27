@@ -73,3 +73,26 @@ legend("topright", legend = names(legend_colors), fill = legend_colors,
 
 pca_scores <- pca$scores
 write.csv(pca_scores, "pca_scores.csv")
+
+####Nolan's way####
+Con.Source.plot <- ggplot() +
+  ylab(expression(paste(delta^{2}, "H (\u2030)")))+
+  xlab(expression(paste(delta^{18}, "O (\u2030)"))) +
+  theme(text = element_text(size=15)) +
+  scale_colour_manual(values = col) +
+  theme_linedraw(base_size = 22) +
+  geom_point(data = Sum_s.data, aes(x = mean.O, y = mean.H, color = Common.Names), size = 10, shape = 18) +
+  geom_errorbar(data = Sum_s.data, aes(x = mean.O, y = mean.H,
+                                       ymin = mean.H - sd.H,
+                                       ymax = mean.H + sd.H, color = Common.Names)) +
+  geom_errorbar(data = Sum_s.data, aes(x = mean.O, y = mean.H,
+                                       xmin = mean.O - sd.O,
+                                       xmax = mean.O + sd.O, color = Common.Names)) +
+  geom_point(data = Cotton.Wood.Data.c, aes(x= d18O, y = d2H, color = Species.and.Size,
+                                            fill = Species.and.Size, size = 2)) +
+  stat_ellipse(data = Cotton.Wood.Data.c, aes(x= d18O, y = d2H,color = Species.and.Size),
+               alpha = 0.0  ,
+               type = "norm",
+               geom = "polygon",
+               size = 1)
+Con.Source.plot
