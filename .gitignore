@@ -8,3 +8,15 @@
 *.gz
 
 aciurina/all/vcf/.vcftools_temp.sh.swp
+
+aciurina/all/snmf/aciurina_all.snmf/K1/run7/aciurina_all_r7.1.snmfClass
+
+*.Q
+
+*.G
+
+*.snmfClass
+
+*.geno
+
+aciurina/all/snmf/
