@@ -48,7 +48,7 @@ pop(focal_gl) <- c("ABQ-S", "ABQ-S", "ABQ-S",
                    "TES-S", "TES-S", "TES-S", 
                    "TRE-F", "TRE-F", "TRE-F", 
                    "TRQ-F", "TRQ-F", "TRQ-F")
-?glPca
+
 #Run PCA
 focal_pca <- glPca(focal_gl, n.cores=4, nf=4)
 #Not really great, but can be helpful for visualizing potentially problematic samples
