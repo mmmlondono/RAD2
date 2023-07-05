@@ -11,6 +11,7 @@ library("paletteer")
 #This is run in Rstudio (it being an IDE is especially nice for visualizing)
 #Read in VCF
 rbrush_ref <- read.vcfR("good_rbrush/rbrush_good.filtered.vcf")
+rbrush_ref <- read.vcfR("good_rbrush/2goods/rbrush_2good.filtered.vcf") #2
 
 #Convert to genlight format
 focal_gl <- vcfR2genlight(rbrush_ref)
@@ -18,7 +19,7 @@ focal_gl <- vcfR2genlight(rbrush_ref)
 popmap<-data.frame(id=colnames(rbrush_ref@gt)[2:length(colnames(rbrush_ref@gt))],pop=substr(colnames(rbrush_ref@gt)[2:length(colnames(rbrush_ref@gt))], 7,8))
 #Add population info, setting up the population array
 pop(focal_gl) <- c("S", "S", "C", "C", "S", "S", "F", "F", "N", "N", "N", "N", "N", "N", "F", "F", "F", "S", "S", "S", "C", "C", "C", "C", "M", "M", "M", "M", "M", "M", "M", "N", "F", "F", "C", "C", "C", "S", "S", "S", "S", "S", "X", "X", "C", "C", "H", "H", "H", "S", "S", "S", "S", "S", "C", "C", "C", "C", "C", "S", "S", "S", "S", "M", "M", "M", "M", "M", "M", "M", "C", "C", "C", "C", "C", "M", "M", "M", "M", "M", "N", "N", "N", "N", "N", "N", "S", "S", "S", "S", "S", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F")
-
+pop(focal_gl) <- c("S", "C", "S", "F", "F", "N", "N", "N", "N", "N", "N", "F", "F", "F", "S", "S", "C", "C", "C", "C", "M", "M", "M", "M", "M", "M", "M", "N", "F", "F", "C", "C", "C", "S", "S", "S", "S", "S", "X", "X", "C", "C", "H", "H", "H", "S", "S", "S", "S", "S", "C", "C", "C", "C", "C", "S", "S", "S", "S", "M", "M", "M", "M", "M", "C", "C", "C", "C", "C", "M", "M", "M", "M", "M", "N", "N", "N", "N", "N", "N", "S", "S", "S", "S", "S", "F", "F", "F", "F", "F", "F", "F", "F", "F", "G", "G", "G", "O", "O", "O")
 #Run PCA
 focal_pca <- glPca(focal_gl, n.cores=4, nf=4)
 #Not really great, but can be helpful for visualizing potentially problematic samples
@@ -42,33 +43,37 @@ pca <- glPca(focal_gl, nf = 30)
 scatter(pca, posi = "none")
 # Create named color vector for the legend
 legend_colors <- spectral(7)
-legend_colors <- c("#0072B2", "#009E73", "#000000", "#CC79A7",
-                    "#F0E442", "#D55E00", "#56B4E9")
+legend_colors <- c("#000000", "#E69F00", "#56B4E9", "#009E73", 
+                   "#0072B2", "#D55E00", "#CC79A7")
+legend_colors <- spectral(9)
+legend_colors <- c("#000000", "#E69F00", "#56B4E9", "#009E73", 
+                   "#F0E442", "#0072B2", "#D55E00", "#CC79A7", "#999999")
 
 names(legend_colors) <- c("C", "F", "H", "M", "N", "S", "X")     
 #levels: C F H M N S X
-
+names(legend_colors) <- c("C", "F", "G", "H", "M", "N", "O", "S", "X")
+#levels: C F G H M N O S X
 popmap$pop=as.factor(popmap$pop)
 
 # Plot the first two principal components
 plot(x = pca$scores[, 1], y = pca$scores[, 2], col = legend_colors [as.numeric(popmap$pop)], cex = 1, pch = 19)
 
 # Add a legend
-legend("bottomright", legend = names(legend_colors), fill = legend_colors,
+legend("topleft", legend = names(legend_colors), fill = legend_colors,
        title = "Population", bty = "n", ncol = 1, box.lwd = 0, box.col = "white", cex = 0.8)
 
 # Plot the second and third principal components
 plot(x = pca$scores[, 2], y = pca$scores[, 3], col = legend_colors [as.numeric(popmap$pop)], cex = 1, pch = 19)
 
 # Add a legend
-legend("topright", legend = names(legend_colors), fill = legend_colors,
+legend("bottomright", legend = names(legend_colors), fill = legend_colors,
        title = "Population", bty = "n", ncol = 1, box.lwd = 0, box.col = "white", cex = 0.8)
 
 # Plot the first and third principal components
 plot(x = pca$scores[, 1], y = pca$scores[, 3], col = legend_colors [as.numeric(popmap$pop)], cex = 1, pch = 19)
 
 # Add a legend
-legend("topright", legend = names(legend_colors), fill = legend_colors,
+legend("bottomleft", legend = names(legend_colors), fill = legend_colors,
        title = "Population", bty = "n", ncol = 1, box.lwd = 0, box.col = "white", cex = 0.8)
 
 pca_scores <- pca$scores

@@ -26,10 +26,10 @@ goodrbrush_snmf = snmf("good_rbrush/rbrush_good.geno", ploidy=2,
 #so save and load#
 saveRDS(goodrbrush_snmf, file = "goodrbrush_snmf")
 
-best_run <- which.min(cross.entropy(goodrbrush_snmf, K = 8))
-#select K 7####
-q_mat <- Q(goodrbrush_snmf, K = 8, run = best_run)
-colnames(q_mat) <- paste0("P", 1:8)
+best_run <- which.min(cross.entropy(goodrbrush_snmf, K = 9))
+#select K ####
+q_mat <- Q(goodrbrush_snmf, K = 9, run = best_run)
+colnames(q_mat) <- paste0("P", 1:9)
 pops <- read.csv("good_rbrush/popmap_ord.csv")
 q_df <- q_mat %>%
   as_tibble() %>%
