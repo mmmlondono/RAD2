@@ -40,7 +40,7 @@ library(ggplot2)
 library(ggpubr)
 ####reference based####
 ##Mean depth
-var_depth <- read_delim("rbrush/erna/vcf/referna_sitedepth.ldepth.mean", delim = "\t",
+var_depth <- read_delim("rbrush/erna/vcftools_refbased/referna_sitedepth.ldepth.mean", delim = "\t",
                         col_names = c("chr", "pos", "mean_depth", "var_depth"), skip =1)
 a <- ggplot(var_depth, aes(mean_depth)) +
   geom_density(fill = "dodgerblue1",colour = "black", alpha = 0.3)+
@@ -50,14 +50,14 @@ summary(var_depth$mean_depth)
 a + theme_light() + xlim(0, 100)
 a
 ##Variant missingness
-var_miss <- read_delim("rbrush/erna/vcf/referna_miss_site.lmiss", delim = "\t",
+var_miss <- read_delim("rbrush/erna/vcftools_refbased/referna_miss_site.lmiss", delim = "\t",
                        col_names = c("chr", "pos", "nchr", "nfiltered", "nmiss","fmiss"), skip = 1)
 b <- ggplot(var_miss, aes(fmiss)) + geom_density(fill = "dodgerblue1", colour = "black", alpha = 0.3)
 b + theme_light()
 summary(var_miss$fmiss)
 
 ##Minor alelle frecuencies
-var_freq <- read_delim("rbrush/erna/vcf/referna_alleles.frq", delim = "\t",
+var_freq <- read_delim("rbrush/erna/vcftools_refbased/referna_alleles.frq", delim = "\t",
                        col_names = c("chr", "pos", "nalleles", "nchr", "a1", "a2"), skip = 1)
 var_freq$maf <- var_freq %>% select(a1, a2) %>% apply(1, function(z) min(z))
 c <- ggplot(var_freq, aes(maf)) + geom_density(fill = "dodgerblue1", colour = "black", alpha = 0.3)
@@ -65,14 +65,58 @@ c + theme_light()
 summary(var_freq$maf)
 
 ##Mean depth per individual
-ind_depth <- read_delim("rbrush/erna/vcf/referna_depth.idepth", delim = "\t",
+ind_depth <- read_delim("rbrush/erna/vcftools_refbased/referna_depth.idepth", delim = "\t",
                         col_names = c("ind", "nsites", "depth"), skip = 1)
 d <- ggplot(ind_depth, aes(depth)) + geom_histogram(fill = "dodgerblue1", colour = "black", alpha = 0.3)
 d + theme_light()
 
 ##Proportion of missing data per individual
-ind_miss  <- read_delim("rbrush/erna/vcf/referna_miss_indiv.imiss", delim = "\t",
+ind_miss  <- read_delim("rbrush/erna/vcftools_refbased/referna_miss_indiv.imiss", delim = "\t",
                         col_names = c("ind", "ndata", "nfiltered", "nmiss", "fmiss"), skip = 1)
 e <- ggplot(ind_miss, aes(fmiss)) + geom_histogram(fill = "dodgerblue1", colour = "black", alpha = 0.3)
 e + theme_light()
 
+####denovo####
+
+var_depth1 <- read_delim("rbrush/erna/vcftools/erna_sitedepth.ldepth.mean", delim = "\t",
+                         col_names = c("chr", "pos", "mean_depth", "var_depth"), skip =1)
+a1 <- ggplot(var_depth1, aes(mean_depth)) +
+  xlim(0, 100)+ geom_density(fill = "dodgerblue1", colour = "black", alpha = 0.3)
+a1 + theme_light()
+summary(var_depth1$mean_depth)
+var_miss1 <- read_delim("rbrush/erna/vcftools/erna_miss_site.lmiss", delim = "\t",
+                        col_names = c("chr", "pos", "nchr", "nfiltered", "nmiss","fmiss"), skip = 1)
+b1 <- ggplot(var_miss1, aes(fmiss)) + geom_density(fill = "dodgerblue1", colour = "black", alpha = 0.3)
+b1 + theme_light()
+summary(var_miss1$fmiss)
+var_freq1 <- read_delim("rbrush/erna/vcftools/erna_alleles.frq", delim = "\t",
+                        col_names = c("chr", "pos", "nalleles", "nchr", "a1", "a2"), skip = 1)
+var_freq1$maf <- var_freq1 %>% select(a1, a2) %>% apply(1, function(z) min(z))
+c1 <- ggplot(var_freq1, aes(maf)) + geom_density(fill = "dodgerblue1", colour = "black", alpha = 0.3)
+c1 + theme_light()
+summary(var_freq1$maf)
+ind_depth1 <- read_delim("rbrush/erna/vcftools/erna_depth.idepth", delim = "\t",
+                         col_names = c("ind", "nsites", "depth"), skip = 1)
+d1 <- ggplot(ind_depth1, aes(depth)) + geom_histogram(fill = "dodgerblue1", colour = "black", alpha = 0.3)
+d1 + theme_light()
+ind_miss1  <- read_delim("rbrush/erna/vcftools/erna_miss_indiv.imiss", delim = "\t",
+                         col_names = c("ind", "ndata", "nfiltered", "nmiss", "fmiss"), skip = 1)
+e1 <- ggplot(ind_miss1, aes(fmiss)) + geom_histogram(fill = "dodgerblue1", colour = "black", alpha = 0.3)
+e1 + theme_light()
+
+####plot them all together####
+mean_depth <- ggarrange(a, a1, 
+                        labels = c("ref based", "de novo"),
+                        ncol = 2, nrow = 1)
+variant_missingness <- ggarrange(b, b1,
+                                 labels = c("ref based", "de novo"),
+                                 ncol = 2, nrow = 1)
+minor_allele <- ggarrange(c, c1,
+                          labels = c("ref based", "de novo"),
+                          ncol = 2, nrow = 1)
+depth_indiv <- ggarrange(d, d1,
+                         labels = c("ref based", "de novo"),
+                         ncol = 2, nrow = 1)
+missingness_indiv <- ggarrange(e, e1,
+                               labels = c("ref based", "de novo"),
+                               ncol = 2, nrow = 1)

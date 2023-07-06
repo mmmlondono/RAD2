@@ -13,7 +13,7 @@ library(RColorBrewer)
 library(nationalparkcolors)
 
 #Read in VCF
-goodrbrush_vcf <- read.vcfR("good_rbrush/rbrush_good.filtered.vcf")
+goodrbrush_vcf <- read.vcfR("good_rbrush/2goods/rbrush_2good.filtered.vcf") #2
 
 popmap<-data.frame(id=colnames(goodrbrush_vcf@gt)[2:length(colnames(goodrbrush_vcf@gt))],pop=substr(colnames(goodrbrush_vcf@gt)[2:length(colnames(goodrbrush_vcf@gt))], 7,8))
 #convert to genlight object
@@ -21,23 +21,22 @@ goodrbrush_genlight <- vcfR2genlight(goodrbrush_vcf)
 
 ####create snmf file####
 #takes for ever#
-vcf2geno("good_rbrush/rbrush_good.filtered.vcf", output = "good_rbrush/rbrush_good.geno")
-goodrbrush_snmf = snmf("good_rbrush/rbrush_good.geno", ploidy=2, 
-                     K = 1:10, alpha = 10, project = "new", entropy = T, repetitions = 50)
-
+#2#
+vcf2geno("good_rbrush/2goods/rbrush_2good.filtered.vcf", output = "good_rbrush/2goods/rbrush_good.geno")
+good2rbrush_snmf = snmf("good_rbrush/2goods/rbrush_good.geno", ploidy=2, 
+                       K = 1:10, alpha = 10, project = "new", entropy = T, repetitions = 50)
 #so save and load#
-saveRDS(goodrbrush_snmf, file = "goodrbrush_snmf")
+saveRDS(goodrbrush_snmf, file = "good_rbrush/2goods/goodrbrush_snmf")
 
 # plot to decide optimal K, although don't put too much stock in k values
 plot(aciurina_snmf, cex = 1.2, col = "lightblue", pch = 19)
 
-best_run <- which.min(cross.entropy(goodrbrush_snmf, K = 8))
-
+best_run <- which.min(cross.entropy(goodrbrush_snmf, K = 9))
 #select K ####
-q_mat <- Q(goodrbrush_snmf, K = 8, run = best_run)
-colnames(q_mat) <- paste0("P", 1:8)
+q_mat <- Q(goodrbrush_snmf, K = 9, run = best_run)
+colnames(q_mat) <- paste0("P", 1:9)
 
-pops <- read.csv("good_rbrush/popmap_ord.csv")
+pops <- read.csv("good_rbrush/2goods/popmap_order.csv")
 
 q_df <- q_mat %>%
   as_tibble() %>%
@@ -56,11 +55,11 @@ q_df_prates <- q_df_long %>%
   mutate(individual = forcats::fct_inorder(factor(individual)))
 
 q_palette <- hcl.colors(8, palette = "spectral")
-q_palette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", 
-               "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+q_palette <- c("#000000", "#E69F00", "#56B4E9","#F0E442" , 
+                "#0072B2","#009E73" , "#D55E00","#CC79A7", "#999999")
 #q_palette  <- c("#000000", "#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 #"gold", "#bebada", "#8dd3c7", "#bc80bd", "darkblue", "#80b1d3", "#fdb462", "#b3de69", "#fccde5", "#8dd3c7","#fb8072"
-                        
+
 q_df_prates %>%
   ggplot() +
   geom_col(aes(x = individual, y = q, fill = pop)) +
@@ -76,14 +75,14 @@ q_df_prates %>%
         panel.background = element_blank(),
         axis.title = element_blank(),
         panel.grid = element_blank()
-        )
+  )
 
 #------------------------------------------------------------------------------#
 ####Ethan's way####
-                        
+
 q_palette <- c("#8dd3c7", "gold", "#bebada", "#fb8072", "#80b1d3",
-                        "#fdb462", "#b3de69", "#fccde5", "#bc80bd", "darkblue") 
-                                                
+               "#fdb462", "#b3de69", "#fccde5", "#bc80bd", "darkblue") 
+
 # Plotting function used to plot sNMF output.
 # Input is sNMF object, the k value, and optionally an array of colors (has default of 10).
 plot_sNMF <- function(input, k_val, colors = q_palette(k_val+1)){
@@ -93,11 +92,11 @@ plot_sNMF <- function(input, k_val, colors = q_palette(k_val+1)){
   q_matrix <- Q(input, K = k_val, run = best_run2)
   # plots the output, space makes blank between indivs
   barplot(t(q_matrix), col = colors, border = NA, space = 0.25, xlab = "Individuals", ylab = "Admixture coefficients", horiz=FALSE)
-  }
-                        
+}
+
 # plot to decide optimal K, although don't put too much stock in k values
 plot(aciurina_snmf, cex = 1.2, col = "lightblue", pch = 19)
-                        
+
 # here I override the default colors
 par(mfrow=c(6,1), mar=c(0,2,0,0), oma=c(1,2,1,0))
 plot_sNMF(aciurina_snmf, 2, c("gold", "#bebada"))
@@ -106,4 +105,3 @@ plot_sNMF(aciurina_snmf, 4, c("gold", "#bebada", "#b3de69", "#80b1d3"))
 plot_sNMF(aciurina_snmf, 5, c("gold", "#bebada", "#b3de69", "#80b1d3", "#fb8072"))
 plot_sNMF(aciurina_snmf, 6, c("gold", "#bebada", "#b3de69", "#80b1d3", "#fb8072","#fdb462"))
 plot_sNMF(aciurina_snmf, 7, c("gold", "#bebada", "#b3de69", "#80b1d3", "#fb8072","#fdb462", "#fccde5"))                         
-                        
