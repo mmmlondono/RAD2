@@ -120,3 +120,4 @@ depth_indiv <- ggarrange(d, d1,
 missingness_indiv <- ggarrange(e, e1,
                                labels = c("ref based", "de novo"),
                                ncol = 2, nrow = 1)
+
