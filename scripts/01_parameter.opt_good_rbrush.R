@@ -40,7 +40,7 @@ library(tidyverse)
 library(readr)
 library(ggplot2)
 library(ggpubr)
-####reference based####
+####????####
 ##Mean depth
 var_depth <- read_delim("good_rbrush/vcftools/good_sitedepth.ldepth.mean", delim = "\t",
                         col_names = c("chr", "pos", "mean_depth", "var_depth"), skip =1)
@@ -78,7 +78,7 @@ ind_miss  <- read_delim("good_rbrush/vcftools/good_miss_indiv.imiss", delim = "\
 e <- ggplot(ind_miss, aes(fmiss)) + geom_histogram(fill = "dodgerblue1", colour = "black", alpha = 0.3)
 e + theme_light()
 
-####with R 0.80####
+####2good with R 0.80####
 var_depth1 <- read_delim("good_rbrush/vcftools/good2_sitedepth.ldepth.mean", delim = "\t",
                          col_names = c("chr", "pos", "mean_depth", "var_depth"), skip =1)
 a1 <- ggplot(var_depth1, aes(mean_depth)) +
@@ -105,46 +105,46 @@ ind_miss1  <- read_delim("good_rbrush/vcftools/good2_miss_indiv.imiss", delim = 
 e1 <- ggplot(ind_miss1, aes(fmiss)) + geom_histogram(fill = "dodgerblue1", colour = "black", alpha = 0.3)
 e1 + theme_light()
 
-####2goods with R 0.80####
-var_depth2 <- read_delim("good_rbrush/2vcftools/good2_sitedepth.ldepth.mean", delim = "\t",
+####3good with R 0.80####
+var_depth2 <- read_delim("good_rbrush/vcftools/good3_sitedepth.ldepth.mean", delim = "\t",
                          col_names = c("chr", "pos", "mean_depth", "var_depth"), skip =1)
 a2 <- ggplot(var_depth2, aes(mean_depth)) +
   xlim(0, 100)+ geom_density(fill = "dodgerblue1", colour = "black", alpha = 0.3)
 a2 + theme_light()
 summary(var_depth2$mean_depth)
-var_miss2 <- read_delim("good_rbrush/2vcftools/good2_miss_site.lmiss", delim = "\t",
+var_miss2 <- read_delim("good_rbrush/vcftools/good3_miss_site.lmiss", delim = "\t",
                         col_names = c("chr", "pos", "nchr", "nfiltered", "nmiss","fmiss"), skip = 1)
 b2 <- ggplot(var_miss2, aes(fmiss)) + geom_density(fill = "dodgerblue1", colour = "black", alpha = 0.3)
 b2 + theme_light()
 summary(var_miss1$fmiss)
-var_freq2 <- read_delim("good_rbrush/2vcftools/good2_alleles.frq", delim = "\t",
+var_freq2 <- read_delim("good_rbrush/vcftools/good3_alleles.frq", delim = "\t",
                         col_names = c("chr", "pos", "nalleles", "nchr", "a1", "a2"), skip = 1)
 var_freq2$maf <- var_freq2 %>% select(a1, a2) %>% apply(1, function(z) min(z))
 c2 <- ggplot(var_freq1, aes(maf)) + geom_density(fill = "dodgerblue1", colour = "black", alpha = 0.3)
 c2 + theme_light()
 summary(var_freq1$maf)
-ind_depth2 <- read_delim("good_rbrush/2vcftools/good2_depth.idepth", delim = "\t",
+ind_depth2 <- read_delim("good_rbrush/vcftools/good3_depth.idepth", delim = "\t",
                          col_names = c("ind", "nsites", "depth"), skip = 1)
 d2 <- ggplot(ind_depth2, aes(depth)) + geom_histogram(fill = "dodgerblue1", colour = "black", alpha = 0.3)
 d2 + theme_light()
-ind_miss2  <- read_delim("good_rbrush/2vcftools/good2_miss_indiv.imiss", delim = "\t",
+ind_miss2  <- read_delim("good_rbrush/vcftools/good3_miss_indiv.imiss", delim = "\t",
                          col_names = c("ind", "ndata", "nfiltered", "nmiss", "fmiss"), skip = 1)
 e2 <- ggplot(ind_miss2, aes(fmiss)) + geom_histogram(fill = "dodgerblue1", colour = "black", alpha = 0.3)
 e2 + theme_light()
 
 ####plot them all together####
 mean_depth <- ggarrange(a, a1, a2,
-                        labels = c("no .80", ".80", ".80 2"),
+                        labels = c("no .80 1", ".80 2", ".80 3"),
                         ncol = 3, nrow = 1)
 variant_missingness <- ggarrange(b, b1, b2,
-                                 labels = c("no .80", ".80", ".80 2"),
+                                 labels = c("no .80", ".80 2", ".80 3"),
                                  ncol = 3, nrow = 1)
 minor_allele <- ggarrange(c, c1, c2,
-                          labels = c("no .80", ".80", ".80 2"),
+                          labels = c("no .80", ".80 2", ".80 3"),
                           ncol = 3, nrow = 1)
 depth_indiv <- ggarrange(d, d1, d3,
-                         labels = c("no .80", ".80", ".80 2"),
+                         labels = c("no .80", ".80 2", ".80 3"),
                          ncol = 3, nrow = 1)
 missingness_indiv <- ggarrange(e, e1, e4,
-                               labels = c("no .80", ".80", ".80 2"),
+                               labels = c("no .80", ".80 2", ".80 3"),
                                ncol = 3, nrow = 1)

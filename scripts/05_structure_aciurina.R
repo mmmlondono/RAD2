@@ -14,14 +14,15 @@ library(nationalparkcolors)
 
 #Read in VCF
 aciurina_vcf <- read.vcfR("aciurina/all/aciurina2_.8.filtered.vcf")
+aciurina_vcf <- read.vcfR("aciurina/aciurina2/aciurina.filtered.vcf") #2
 popmap<-data.frame(id=colnames(aciurina_vcf@gt)[2:length(colnames(aciurina_vcf@gt))],pop=substr(colnames(aciurina_vcf@gt)[2:length(colnames(aciurina_vcf@gt))], 7,8))
 #convert to genlight object
 aciurina_genlight <- vcfR2genlight(aciurina_vcf)
 
 ####create snmf file####
 #takes for ever#
-vcf2geno("aciurina/aciurina2_.8.filtered.vcf", output = "aciurina/all/snmf/aciurina_all.geno")
-aciurina_snmf = snmf("aciurina/all/snmf/aciurina_all.geno", ploidy=2, 
+vcf2geno("aciurina/aciurina2/aciurina.filtered.vcf", output = "aciurina/aciurina2/snmf/aciurina_all.geno")
+aciurina_snmf = snmf("aciurina/aciurina2/snmf/aciurina_all.geno", ploidy=2, 
                      K = 1:10, alpha = 10, project = "new", entropy = T, repetitions = 50)
 #so save and load#
 saveRDS(aciurina_snmf, file = "aciurina_snmf")

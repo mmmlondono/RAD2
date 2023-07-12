@@ -11,6 +11,7 @@ library("vcfR")
 #VCF file
 vcfR <- read.vcfR("good_rbrush/populations.snps.vcf")
 vcfR <- read.vcfR("good_rbrush/2goods/populations.snps.vcf") #(2)
+vcfR <- read.vcfR("good_rbrush/3goods/populations.snps.vcf") #(3)
 #populations map file
 popmap<-data.frame(id=colnames(vcfR@gt)[2:length(colnames(vcfR@gt))],pop=substr(colnames(vcfR@gt)[2:length(colnames(vcfR@gt))], 7,8))
 #popmap <- read.csv("rbrush/erna/popmap.csv")
@@ -96,7 +97,7 @@ heatmap.bp(gq, rlabels = FALSE)
 
 ####write out vcf files for downstream analyses####
 #write out vcf with all SNPs
-vcfR::write.vcf(vcfR, "rbrush_2good.filtered.vcf.gz")
+vcfR::write.vcf(vcfR, "rbrush_3good.filtered.vcf.gz")
 #linkage filter vcf to thin SNPs to one per 500bp
 vcfR.thin<-distance_thin(vcfR, min.distance = 500)
 #write out thinned vcf

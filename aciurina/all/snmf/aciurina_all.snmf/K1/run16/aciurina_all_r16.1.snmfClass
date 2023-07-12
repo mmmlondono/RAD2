@@ -1,6 +1,0 @@
-new("snmfClass", directory = "K1/run16/", snmfClass.file = "aciurina_all_r16.1.snmfClass", 
-    K = 1L, run = 16L, CPU = 1L, seed = 157646454L, alpha = 10, 
-    percentage = 0.05, I = 0L, iterations = 200L, entropy = TRUE, 
-    tolerance = 1e-05, crossEntropy = 0.263651393853293, ploidy = 2L, 
-    Q.input.file = "", Q.output.file = "aciurina_all_r16.1.Q", 
-    G.output.file = "aciurina_all_r16.1.G")

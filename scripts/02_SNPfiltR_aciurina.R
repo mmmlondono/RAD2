@@ -10,9 +10,10 @@ library("vcfR")
 ####Read in files####
 #VCF file
 vcfR <- read.vcfR("aciurina/all/vcf/populations2.snps.vcf")
-#populations map file
+vcfR <- read.vcfR("aciurina/aciurina2/populations.snps.vcf")
 
-popmap<-data.frame(id=colnames(vcfR@gt)[2:length(colnames(vcfR@gt))],pop=substr(colnames(vcfR@gt)[2:length(colnames(vcfR@gt))], 1,8))
+#populations map file
+popmap<-data.frame(id=colnames(vcfR@gt)[2:length(colnames(vcfR@gt))],pop=substr(colnames(vcfR@gt)[2:length(colnames(vcfR@gt))], 7,8))
 
 ####Implement quality filters####
 #that don’t involve missing data This is because removing low data samples will alter percentage/quantile based missing data cutoffs, so we wait to implement those until after deciding on our final set of samples for downstream analysis
@@ -75,7 +76,7 @@ miss<-assess_missing_data_tsne(vcfR=vcfR, popmap = popmap,
                                thresholds = c(.75,.85,.95), clustering = FALSE)
 
 #choose a cutoff resulting in an acceptable amount of missing data in each sample, and maximizes SNPs retained while minimizing overall missing data, and filter vcf
-vcfR<-missing_by_snp(vcfR, cutoff = .8)
+vcfR<-missing_by_snp(vcfR, cutoff = .75)
 
 #check how many SNPs and samples are left
 vcfR
@@ -102,7 +103,7 @@ heatmap.bp(gq, rlabels = FALSE)
 
 ####write out vcf files for downstream analyses####
 #write out vcf with all SNPs
-vcfR::write.vcf(vcfR, "aciurina2_.8.filtered.vcf.gz")
+vcfR::write.vcf(vcfR, "aciurina.filtered.vcf.gz")
 #linkage filter vcf to thin SNPs to one per 500bp
 vcfR.thin<-distance_thin(vcfR, min.distance = 500)
 #write out thinned vcf

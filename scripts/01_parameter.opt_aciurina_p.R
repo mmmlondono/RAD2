@@ -158,26 +158,47 @@ ind_miss3  <- read_delim("aciurina/all/vcf/m7_M3_n3/m7_M3_n3_miss_indiv.imiss", 
                          col_names = c("ind", "ndata", "nfiltered", "nmiss", "fmiss"), skip = 1)
 e3 <- ggplot(ind_miss3, aes(fmiss)) + geom_histogram(fill = "dodgerblue1", colour = "black", alpha = 0.3)
 e3 + theme_light()
+
+####NEW POPMAP####
+var_depth4 <- read_delim("aciurina/aciurina2/vcf/aciu2_sitedepth.ldepth.mean", delim = "\t",
+                         col_names = c("chr", "pos", "mean_depth", "var_depth"), skip =1)
+a4 <- ggplot(var_depth4, aes(mean_depth)) + xlim(0, 100)+ geom_density(fill = "dodgerblue1", colour = "black", alpha = 0.3)
+a4 + theme_light()
+summary(var_depth4$mean_depth)
+a4 + theme_light() + xlim(0, 100)
+var_miss4 <- read_delim("aciurina/aciurina2/vcf/aciu2_miss_site.lmiss", delim = "\t",
+                        col_names = c("chr", "pos", "nchr", "nfiltered", "nmiss","fmiss"), skip = 1)
+b4 <- ggplot(var_miss4, aes(fmiss)) + geom_density(fill = "dodgerblue1", colour = "black", alpha = 0.3)
+b4 + theme_light()
+summary(var_miss4$fmiss)
+var_freq4 <- read_delim("aciurina/aciurina2/vcf/aciu2_alleles.frq", delim = "\t",
+                        col_names = c("chr", "pos", "nalleles", "nchr", "a1", "a2"), skip = 1)
+var_freq4$maf <- var_freq4 %>% select(a1, a2) %>% apply(1, function(z) min(z))
+c4 <- ggplot(var_freq4, aes(maf)) + geom_density(fill = "dodgerblue1", colour = "black", alpha = 0.3)
+c4 + theme_light()
+summary(var_freq4$maf)
+ind_depth4 <- read_delim("aciurina/aciurina2/vcf/aciu2_depth.idepth", delim = "\t",
+                         col_names = c("ind", "nsites", "depth"), skip = 1)
+d4 <- ggplot(ind_depth4, aes(depth)) + geom_histogram(fill = "dodgerblue1", colour = "black", alpha = 0.3)
+d4 + theme_light()
+ind_miss4  <- read_delim("aciurina/aciurina2/vcf/aciu2_miss_indiv.imiss", delim = "\t",
+                         col_names = c("ind", "ndata", "nfiltered", "nmiss", "fmiss"), skip = 1)
+e4 <- ggplot(ind_miss4, aes(fmiss)) + geom_histogram(fill = "dodgerblue1", colour = "black", alpha = 0.3)
+e4 + theme_light()
+
 ####plot them all together####
-mean_depth <- ggarrange(a, a1, a2, a3, 
-                        labels = c("m10M5n5", "m5M2n2", "m5M3n3", "m7M3n3"),
-                        ncol = 2, nrow = 2)
-variant_missingness <- ggarrange(b, b1, b2, b3, 
-                                 labels = c("m10M5n5", "m5M2n2", "m5M3n3", "m7M3n3"),
-                                 ncol = 2, nrow = 2)
-minor_allele <- ggarrange(c, c1, c2, c3, 
-                          labels = c("m10M5n5", "m5M2n2", "m5M3n3", "m7M3n3"),
-                          ncol = 2, nrow = 2)
-depth_indiv <- ggarrange(d, d1, d2, d3, 
-                         labels = c("m10M5n5", "m5M2n2", "m5M3n3", "m7M3n3"),
-                         ncol = 2, nrow = 2)
-missingness_indiv <- ggarrange(e, e1, e2, e3, 
-                               labels = c("m10M5n5", "m5M2n2", "m5M3n3", "m7M3n3"),
-                               ncol = 2, nrow = 2)
-missingness_indiv 
-mean_depth
-variant_missingness
-minor_allele
-depth_indiv
-d3
-a3
+mean_depth <- ggarrange(a, a1, a2, a3, a4,
+                        labels = c("m10M5n5", "m5M2n2", "m5M3n3", "m7M3n3", "newpop"),
+                        ncol = 3, nrow = 2)
+variant_missingness <- ggarrange(b, b1, b2, b3, b4,
+                                 labels = c("m10M5n5", "m5M2n2", "m5M3n3", "m7M3n3", "newpop"),
+                                 ncol = 3, nrow = 2)
+minor_allele <- ggarrange(c, c1, c2, c3, c4,
+                          labels = c("m10M5n5", "m5M2n2", "m5M3n3", "m7M3n3", "newpop"),
+                          ncol = 3, nrow = 2)
+depth_indiv <- ggarrange(d, d1, d2, d3, d4,
+                         labels = c("m10M5n5", "m5M2n2", "m5M3n3", "m7M3n3", "newpop"),
+                         ncol = 3, nrow = 2)
+missingness_indiv <- ggarrange(e, e1, e2, e3, e4,
+                               labels = c("m10M5n5", "m5M2n2", "m5M3n3", "m7M3n3", "newpop"),
+                               ncol = 3, nrow = 2)
