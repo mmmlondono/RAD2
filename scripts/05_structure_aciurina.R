@@ -25,12 +25,14 @@ vcf2geno("aciurina/aciurina2/aciurina.filtered.vcf", output = "aciurina/aciurina
 aciurina_snmf = snmf("aciurina/aciurina2/snmf/aciurina_all.geno", ploidy=2, 
                      K = 1:10, alpha = 10, project = "new", entropy = T, repetitions = 50)
 #so save and load#
-saveRDS(aciurina_snmf, file = "aciurina_snmf")
+saveRDS(aciurina_snmf, file = "aciurina/aciurina2/snmf/aciurina_snmf")
+####load####
+aciurina_snmf<-readRDS(file = "aciurina/aciurina2/snmf/aciurina_snmf")
 
-best_run <- which.min(cross.entropy(aciurina_snmf, K = 9))
-#select K 7####
-q_mat <- Q(aciurina_snmf, K = 9, run = best_run)
-colnames(q_mat) <- paste0("P", 1:9)
+best_run <- which.min(cross.entropy(aciurina_snmf, K = 3))
+####select K####
+q_mat <- Q(aciurina_snmf, K =3, run = best_run)
+colnames(q_mat) <- paste0("P", 1:3)
 pops <- read.csv("aciurina/popmap_ord.csv")
 q_df <- q_mat %>%
   as_tibble() %>%
@@ -48,13 +50,9 @@ q_df_prates <- q_df_long %>%
   # this ensures that the factor levels for the individuals follow the ordering we just did. This is necessary for plotting
   mutate(individual = forcats::fct_inorder(factor(individual)))
 
-q_palette <- hcl.colors(9, palette = "spectral")
-q_palette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", 
-                    "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
-q_palette  <- c("#999999", "#E69F00", "#56B4E9", "#009E73", 
-                        "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+q_palette  <- c("#009E73", "#CC79A7","#0072B2")
                #"gold", "#bebada", "#8dd3c7", "#bc80bd", "darkblue", "#80b1d3", "#fdb462", "#b3de69", "#fccde5", "#8dd3c7","#fb8072"
-
+#"#999999", "#000000", "#56B4E9", "#F0E442", #E69F00, "#D55E00"
 q_df_prates %>%
   ggplot() +
   geom_col(aes(x = individual, y = q, fill = pop)) + 
@@ -71,6 +69,9 @@ q_df_prates %>%
         axis.title = element_blank(),
         panel.grid = element_blank()
         )
+
+# plot to decide optimal K, although don't put too much stock in k values
+plot(aciurina_snmf, cex = 1.2, col = "lightblue", pch = 19)
 
 #------------------------------------------------------------------------------#
 ####Ethan's way####
@@ -89,8 +90,7 @@ plot_sNMF <- function(input, k_val, colors = q_palette(k_val+1)){
   barplot(t(q_matrix), col = colors, border = NA, space = 0.25, xlab = "Individuals", ylab = "Admixture coefficients", horiz=FALSE)
 }
 
-# plot to decide optimal K, although don't put too much stock in k values
-plot(aciurina_snmf, cex = 1.2, col = "lightblue", pch = 19)
+
 
   
 

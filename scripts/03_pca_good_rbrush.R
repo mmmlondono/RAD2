@@ -41,7 +41,7 @@ legend_colors <- spectral(9)
 legend_colors <- c("#009E73", "#E69F00", "#56B4E9", "#999999",
                    "#0072B2", "#D55E00", "#000000","#CC79A7")
 legend_colors <- spectral(6)
-legend_colors <- c("#009E73", "#E69F00", "#56B4E9",
+legend_colors <- c("#009E73", "#E69F00", "#000000",
                    "#0072B2", "#D55E00", "#CC79A7")
 
 names(legend_colors) <- c("C", "F", "H", "M", "N", "S", "X")     
@@ -54,9 +54,9 @@ names(legend_colors) <- c("C", "F", "H", "M", "N", "S")
 popmap$pop=as.factor(popmap$pop)
 
 # calculate the first two principal components for plotting
-prop_var <- pca$eig / sum(pca$eig) * 100
+prop_var <- pca_rbr$eig / sum(pca_rbr$eig) * 100
 # Plot the first two principal components
-plot(x = pca$scores[, 1], y = pca$scores[, 2], col = legend_colors[as.numeric(popmap$pop)],cex = 1, pch = 19,
+plot(x = pca_rbr$scores[, 1], y = pca_rbr$scores[, 2], col = legend_colors[as.numeric(popmap$pop)],cex = 1, pch = 19,
      xlab=c("0", paste0("PC1 (", round(prop_var[1], 2), "%)")), ylab=c("0", paste0("PC2 (", round(prop_var[2], 2), "%)")))
 
 # Add a legend
@@ -64,7 +64,7 @@ legend("topright", legend = names(legend_colors), fill = legend_colors,
        title = "Population", bty = "n", ncol = 1, box.lwd = 0, box.col = "white", cex = 0.8)
 
 # Plot the second and third principal components
-plot(x = pca$scores[, 2], y = pca$scores[, 3], col = legend_colors [as.numeric(popmap$pop)], cex = 1, pch = 19,       
+plot(x = pca_rbr$scores[, 2], y = pca_rbr$scores[, 3], col = legend_colors [as.numeric(popmap$pop)], cex = 1, pch = 19,       
      xlab=c("0", paste0("PC2 (", round(prop_var[2], 2), "%)")), ylab=c("0", paste0("PC3 (", round(prop_var[3], 2), "%)")))
 
 # Add a legend
@@ -72,12 +72,12 @@ legend("topright", legend = names(legend_colors), fill = legend_colors,
        title = "Population", bty = "n", ncol = 1, box.lwd = 0, box.col = "white", cex = 0.8)
 
 # Plot the first and third principal components
-plot(x = pca$scores[, 1], y = pca$scores[, 3], col = legend_colors [as.numeric(popmap$pop)], cex = 1, pch = 19,
+plot(x = pca_rbr$scores[, 1], y = pca_rbr$scores[, 3], col = legend_colors [as.numeric(popmap$pop)], cex = 1, pch = 19,
      xlab=c("0", paste0("PC1 (", round(prop_var[1], 2), "%)")), ylab=c("0", paste0("PC3 (", round(prop_var[3], 2), "%)")))
 
 # Add a legend
 legend("topleft", legend = names(legend_colors), fill = legend_colors,
        title = "Population", bty = "n", ncol = 1, box.lwd = 0, box.col = "white", cex = 0.8)
 
-pca_scores <- pca$scores
+pca_scores <- pca_rbr$scores
 write.csv(pca_scores, "pca_scores.csv")

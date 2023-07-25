@@ -1,6 +1,0 @@
-new("snmfProject", snmfProject.file = "aciurina_all.snmfProject", 
-    projDir = "/Users/martinson_lab/Documents/RAD2/aciurina/all/snmf/", 
-    snmfDir = "aciurina_all.snmf/", input.file = "aciurina_all.geno", 
-    runs = list(), K = 1L, snmfClass.files = "K1/run1/aciurina_all_r1.1.snmfClass", 
-    n = 96L, L = 23625L, creationTime = structure(1689106285.46154, class = c("POSIXct", 
-    "POSIXt")))

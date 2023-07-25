@@ -288,5 +288,5 @@ new("snmfProject", snmfProject.file = "aciurina_all.snmfProject",
     "K6/run50/aciurina_all_r50.6.snmfClass", "K7/run50/aciurina_all_r50.7.snmfClass", 
     "K8/run50/aciurina_all_r50.8.snmfClass", "K9/run50/aciurina_all_r50.9.snmfClass", 
     "K10/run50/aciurina_all_r50.10.snmfClass"), n = 96L, L = 23239L, 
-    creationTime = structure(1689106444.74477, class = c("POSIXct", 
+    creationTime = structure(1690237134.83449, class = c("POSIXct", 
     "POSIXt")))
