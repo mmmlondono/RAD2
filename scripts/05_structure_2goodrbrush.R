@@ -13,7 +13,7 @@ library(RColorBrewer)
 library(nationalparkcolors)
 
 #Read in VCF
-goodrbrush_vcf <- read.vcfR("good_rbrush/2goods/rbrush_2good.filtered.vcf") #2
+goodrbrush_vcf <- read.vcfR("good_rbrush/3goods/rbrush_3good.filtered.vcf") #3
 
 popmap<-data.frame(id=colnames(goodrbrush_vcf@gt)[2:length(colnames(goodrbrush_vcf@gt))],pop=substr(colnames(goodrbrush_vcf@gt)[2:length(colnames(goodrbrush_vcf@gt))], 7,8))
 #convert to genlight object
@@ -22,21 +22,23 @@ goodrbrush_genlight <- vcfR2genlight(goodrbrush_vcf)
 ####create snmf file####
 #takes for ever#
 #2#
-vcf2geno("good_rbrush/2goods/rbrush_2good.filtered.vcf", output = "good_rbrush/2goods/rbrush_good.geno")
-good2rbrush_snmf = snmf("good_rbrush/2goods/rbrush_good.geno", ploidy=2, 
+vcf2geno("good_rbrush/3goods/rbrush_3good.filtered.vcf", output = "good_rbrush/3goods/snmf/rbrush_good.geno")
+good2rbrush_snmf = snmf("good_rbrush/3goods/snmf/rbrush_good.geno", ploidy=2, 
                        K = 1:10, alpha = 10, project = "new", entropy = T, repetitions = 50)
 #so save and load#
-saveRDS(goodrbrush_snmf, file = "good_rbrush/2goods/goodrbrush_snmf")
+saveRDS(good2rbrush_snmf, file = "good_rbrush/3goods/snmf/goodrbrush_snmf")
+####load####
+good2rbrush_snmf<-readRDS(file = "good_rbrush/3goods/snmf/goodrbrush_snmf")
 
 # plot to decide optimal K, although don't put too much stock in k values
-plot(aciurina_snmf, cex = 1.2, col = "lightblue", pch = 19)
+plot(good2rbrush_snmf, cex = 1.2, col = "lightblue", pch = 19)
 
-best_run <- which.min(cross.entropy(goodrbrush_snmf, K = 9))
+best_run <- which.min(cross.entropy(good2rbrush_snmf, K = 3))
 #select K ####
-q_mat <- Q(goodrbrush_snmf, K = 9, run = best_run)
-colnames(q_mat) <- paste0("P", 1:9)
+q_mat <- Q(good2rbrush_snmf, K = 3, run = best_run)
+colnames(q_mat) <- paste0("P", 1:3)
 
-pops <- read.csv("good_rbrush/2goods/popmap_order.csv")
+pops <- read.csv("good_rbrush/3goods/popmap_order.csv")
 
 q_df <- q_mat %>%
   as_tibble() %>%
@@ -54,9 +56,7 @@ q_df_prates <- q_df_long %>%
   # this ensures that the factor levels for the individuals follow the ordering we just did. This is necessary for plotting
   mutate(individual = forcats::fct_inorder(factor(individual)))
 
-q_palette <- hcl.colors(8, palette = "spectral")
-q_palette <- c("#000000", "#E69F00", "#56B4E9","#F0E442" , 
-                "#0072B2","#009E73" , "#D55E00","#CC79A7", "#999999")
+q_palette <- c("#E69F00","#009E73","#0072B2" )
 #q_palette  <- c("#000000", "#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 #"gold", "#bebada", "#8dd3c7", "#bc80bd", "darkblue", "#80b1d3", "#fdb462", "#b3de69", "#fccde5", "#8dd3c7","#fb8072"
 

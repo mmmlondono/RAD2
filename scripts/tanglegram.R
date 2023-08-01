@@ -14,6 +14,7 @@ library(dplyr)
 library(ape)
 library(phytools)
 
+####first methods, tanglegram and paco ####
 # Meta file
 meta <- read.table('tanglegram/meta.csv', sep=',', header = T)
 meta1 <- read.table('tanglegram/meta.csv', sep=',', header = T)
@@ -80,8 +81,30 @@ pp + geom_line(aes(x, y, group=label), data=green_tree, color='#009E73')
 pp + geom_line(aes(x, y, group=label), data=dd1, color='#56B4E9')
 
 #### using phytools ####
+ass <- read.csv('tanglegram/ass.csv')
+
+# Load tree 1
+tree1 <- read.nexus('tanglegram/aciurina.tre')
+tree1 <- midpoint(tree1)
+
+# visualize labels of internal nodes:
+plot(tree1, use.edge.length=FALSE)
+nodelabels()
+# rotate clades around nodes
+#tre1.new <- rotate(tree1, 33)
+#tre1.new <- rotate(tre1.new, 36)
+
+# Load tree 2
+tree2 <- read.nexus('tanglegram/rbrnex.tre')
+tree2 <- midpoint(tree2)
+
+# visualize labels of internal nodes:
+plot(tree2, use.edge.length=FALSE)
+nodelabels()
+
+##cophylo function##
 vcophylo<-cophylo(tree1,tree2, assoc=ass)
-n_colors <- 31
+n_colors <- 36
 random_colors <- RColorBrewer::brewer.pal(8, name = "Dark2")
 cols <- setNames(colorRampPalette(random_colors)(n_colors), tree1$tip.label)
 
