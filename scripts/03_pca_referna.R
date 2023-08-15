@@ -10,7 +10,7 @@ library("paletteer")
 ####adegenet’s glPCA####
 #This is run in Rstudio (it being an IDE is especially nice for visualizing)
 #Read in VCF
-rbrush_ref <- read.vcfR("rbrush/erna/rbrush_referna.filtered.vcf")
+rbrush_ref <- read.vcfR("rbrush/erna/rbrush_referna2.filtered.vcf")
 
 #Convert to genlight format
 focal_gl <- vcfR2genlight(rbrush_ref)

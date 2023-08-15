@@ -1,0 +1,36 @@
+#nexus
+begin host;
+tree host =(BOU_C,(((MAL_C,TRE_F),((((MOB_C,((BRG_F,MEE_F),LIM_F)),((REN_C,(REN_H,REN_S)),((ABQ_S,((BOU_S,LOG_S),(RGG_S,TES_S))),MOB_S))),RGG_C),((GUN_F,((((MAL_M,SNM_M),TES_M),SLV_M),((DRY_N,MAL_N),TES_N))),TRQ_F))),TES_C),PAS_F);
+endblock;
+begin parasite;
+tree parasite =(ABQ_S,((((((((((((((BOU_C,PAS_F),SLV_F),(GUN_F,TRQ_F)),(((MAL_C,SNM_C),TES_C),(MOB_C,MTB_F))),RGG_C),TRE_F),((MAL_M,(SLV_M,SNM_M)),TES_M)),((((DRY_N,MAL_N),TES_N),SLV_O),(REN_C,REN_HC))),MOB_G),(REN_HS,REN_S)),MOB_S),LOG_S),SNM_S),(RGG_S,TES_S)),BOU_S);
+endblock;
+begin distribution;
+Range
+	ABQ_S : ABQ_S,
+	BOU_C : BOU_C,
+	BOU_S : BOU_S,
+	DRY_N : DRY_N,
+	GUN_F : GUN_F,
+	LOG_S : LIM_F,
+	MAL_C : MAL_C,
+	MAL_M : MAL_M,
+	MAL_N : MAL_N,
+	MOB_C : MOB_C,
+	MOB_S : MOB_S,
+	PAS_F : PAS_F,
+	REN_C : REN_C,
+	REN_HC : REN_H,
+	REN_HS : REN_H,
+	REN_S : REN_S,
+	RGG_C : RGG_C,
+	RGG_S : RGG_S,
+	SLV_M : SLV_M,
+	SNM_M : SNM_M,
+	TES_C : TES_C,
+	TES_M : TES_M,
+	TES_N : TES_N,
+	TES_S : TES_S,
+	TRE_F : TRE_F,
+	TRQ_F : TRQ_F;
+endblock;

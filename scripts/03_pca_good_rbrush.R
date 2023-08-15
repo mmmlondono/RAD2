@@ -7,6 +7,7 @@ library("vcfR")
 library("parallel")
 library("viridis")
 library("paletteer")
+
 ####adegenet’s glPCA####
 #This is run in Rstudio (it being an IDE is especially nice for visualizing)
 #Read in VCF
