@@ -1,0 +1,36 @@
+#nexus
+begin host;
+tree host = (((((MAL_M:1.0,SNM_M:1.0):1.0,TES_M:1.0):1.0,SLV_M:1.0):1.0,(GUN_F:1.0,(TRQ_F:1.0,((((MOB_C:1.0,((BRG_F:1.0,MEE_F:1.0):1.0,LIM_F:1.0):1.0):1.0,((REN_C:1.0,(REN_H:1.0,REN_S:1.0):1.0):1.0,((ABQ_S:1.0,((BOU_S:1.0,LOG_S:1.0):1.0,(RGG_S:1.0,TES_S:1.0):1.0):1.0):1.0,MOB_S:1.0):1.0):1.0):1.0,RGG_C:1.0):1.0,((MAL_C:1.0,TRE_F:1.0):1.0,(TES_C:1.0,(BOU_C:1.0,PAS_F:1.0):1.0):1.0):1.0):1.0):1.0):1.0):0.5,((DRY_N:1.0,MAL_N:1.0):1.0,TES_N:1.0):0.5);
+endblock;
+begin parasite;
+tree parasite = (((REN_C:1.0,REN_HC:1.0):1.0,((((((((BOU_C:1.0,PAS_F:1.0):1.0,TRE_F:1.0):1.0,RGG_C:1.0):1.0,(GUN_F:1.0,TRQ_F:1.0):1.0):1.0,(MAL_C:1.0,TES_C:1.0):1.0):1.0,MOB_C:1.0):1.0,((MAL_M:1.0,(SLV_M:1.0,SNM_M:1.0):1.0):1.0,TES_M:1.0):1.0):1.0,((REN_HS:1.0,REN_S:1.0):1.0,((LOG_S:1.0,MOB_S:1.0):1.0,(BOU_S:1.0,(ABQ_S:1.0,(RGG_S:1.0,TES_S:1.0):1.0):1.0):1.0):1.0):1.0):1.0):0.5,((DRY_N:1.0,MAL_N:1.0):1.0,TES_N:1.0):0.5);
+endblock;
+begin distribution;
+Range
+	ABQ_S:ABQ_S,
+	BOU_C:BOU_C,
+	BOU_S:BOU_S,
+	DRY_N:DRY_N,
+	GUN_F:GUN_F,
+	LOG_S:LOG_S,
+	MAL_C:MAL_C,
+	MAL_M:MAL_M,
+	MAL_N:MAL_N,
+	MOB_C:MOB_C,
+	MOB_S:MOB_S,
+	PAS_F:PAS_F,
+	REN_C:REN_C,
+	REN_HC:REN_H,
+	REN_HS:REN_H,
+	REN_S:REN_S,
+	RGG_C:RGG_C,
+	RGG_S:RGG_S,
+	SLV_M:SLV_M,
+	SNM_M:SNM_M,
+	TES_C:TES_C,
+	TES_M:TES_M,
+	TES_N:TES_N,
+	TES_S:TES_S,
+	TRE_F:TRE_F,
+	TRQ_F:TRQ_F;
+endblock;

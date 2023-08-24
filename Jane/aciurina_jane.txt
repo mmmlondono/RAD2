@@ -1,0 +1,1 @@
+(ABQ_S,(((((((((((BOU_C,PAS_F),TRE_F),RGG_C),(GUN_F,TRQ_F)),(MAL_C,TES_C)),MOB_C),((MAL_M,(SLV_M,SNM_M)),TES_M)),(((DRY_N,MAL_N),TES_N),(REN_C,REN_HC))),(REN_HS,REN_S)),(LOG_S,MOB_S)),BOU_S),(RGG_S,TES_S))
