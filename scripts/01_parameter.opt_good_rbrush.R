@@ -40,6 +40,7 @@ library(tidyverse)
 library(readr)
 library(ggplot2)
 library(ggpubr)
+
 ####????####
 ##Mean depth
 var_depth <- read_delim("good_rbrush/vcftools/good_sitedepth.ldepth.mean", delim = "\t",
