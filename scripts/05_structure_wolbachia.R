@@ -19,7 +19,8 @@ library(nationalparkcolors)
 #library(seqminer)
 
 #Read in VCF
-wolbachia_vcf <- read.vcfR("wolbachia/wolbachia.filtered.vcf") #3
+wolbachia_vcf <- read.vcfR("wolbachia/wolbachia.filtered.vcf")
+wolbachia_vcf <- read.vcfR("wolbachia/marshmallow.filtered.vcf")
 
 popmap<-data.frame(id=colnames(wolbachia_vcf@gt)[2:length(colnames(wolbachia_vcf@gt))],pop=substr(colnames(wolbachia_vcf@gt)[2:length(colnames(wolbachia_vcf@gt))], 1,8))
 #convert to genlight object
@@ -27,9 +28,9 @@ wolbachia_genlight <- vcfR2genlight(wolbachia_vcf)
 
 ####create snmf file####
 #takes for ever#
-#2#
-vcf2geno("wolbachia/wolbachia.filtered.vcf", output = "wolbachia/snmf/wolbachia.geno")
-good2rbrush_snmf = snmf("wolbachia/snmf/wolbachia.geno", ploidy=2, 
+vcf2geno("wolbachia/marshmallow.filtered.vcf", output = "wolbachia/snmf/marshmallow.geno")
+
+good2rbrush_snmf = snmf("wolbachia/snmf/marshmallow.geno", ploidy=2, 
                         K = 1:10, alpha = 10, project = "new", entropy = T, repetitions = 50)
 
 #so save and load#

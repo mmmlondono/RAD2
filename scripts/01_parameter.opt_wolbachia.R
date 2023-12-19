@@ -79,7 +79,7 @@ ind_miss  <- read_delim("wolbachia/vcf/wol_miss_indiv.imiss", delim = "\t",
 e <- ggplot(ind_miss, aes(fmiss)) + geom_histogram(fill = "dodgerblue1", colour = "black", alpha = 0.3)
 e + theme_light()
 
-####ipyrad####
+####wolbachia x?####
 var_depth1 <- read_delim("wolbachia/vcf/wolo_sitedepth.ldepth.mean", delim = "\t",
                          col_names = c("chr", "pos", "mean_depth", "var_depth"), skip =1)
 a1 <- ggplot(var_depth1, aes(mean_depth)) +
@@ -181,7 +181,7 @@ var_miss3 <- read_delim("wolbachia/vcf/wolR_miss_site.lmiss", delim = "\t",
                         col_names = c("chr", "pos", "nchr", "nfiltered", "nmiss","fmiss"), skip = 1)
 b3 <- ggplot(var_miss3, aes(fmiss)) + geom_density(fill = "dodgerblue1", colour = "black", alpha = 0.3)
 b3 + theme_light()
-summary(var_miss2$fmiss)
+summary(var_miss3$fmiss)
 var_freq3 <- read_delim("wolbachia/vcf/wolR_alleles.frq", delim = "\t",
                         col_names = c("chr", "pos", "nalleles", "nchr", "a1", "a2"), skip = 1)
 var_freq3$maf <- var_freq3 %>% select(a1, a2) %>% apply(1, function(z) min(z))
@@ -190,28 +190,55 @@ c3 + theme_light()
 summary(var_freq3$maf)
 ind_depth3 <- read_delim("wolbachia/vcf/wolR_depth.idepth", delim = "\t",
                          col_names = c("ind", "nsites", "depth"), skip = 1)
-d3 <- ggplot(ind_depth2, aes(depth)) + geom_histogram(fill = "dodgerblue1", colour = "black", alpha = 0.3)
+d3 <- ggplot(ind_depth3, aes(depth)) + geom_histogram(fill = "dodgerblue1", colour = "black", alpha = 0.3)
 d3 + theme_light()
 ind_miss3  <- read_delim("wolbachia/vcf/wolR_miss_indiv.imiss", delim = "\t",
                          col_names = c("ind", "ndata", "nfiltered", "nmiss", "fmiss"), skip = 1)
 e3 <- ggplot(ind_miss3, aes(fmiss)) + geom_histogram(fill = "dodgerblue1", colour = "black", alpha = 0.3)
 e3 + theme_light()
 
+####Reno####
+var_depth4 <- read_delim("wolbachia/vcf/wolren_sitedepth.ldepth.mean", delim = "\t",
+                         col_names = c("chr", "pos", "mean_depth", "var_depth"), skip =1)
+a4 <- ggplot(var_depth4, aes(mean_depth)) +
+  xlim(0, 100)+ geom_density(fill = "dodgerblue1", colour = "black", alpha = 0.3)
+a4 + theme_light()
+summary(var_depth4$mean_depth)
+var_miss4 <- read_delim("wolbachia/vcf/wolren_miss_site.lmiss", delim = "\t",
+                        col_names = c("chr", "pos", "nchr", "nfiltered", "nmiss","fmiss"), skip = 1)
+b4 <- ggplot(var_miss4, aes(fmiss)) + geom_density(fill = "dodgerblue1", colour = "black", alpha = 0.3)
+b4 + theme_light()
+summary(var_miss4$fmiss)
+var_freq4 <- read_delim("wolbachia/vcf/wolren_alleles.frq", delim = "\t",
+                        col_names = c("chr", "pos", "nalleles", "nchr", "a1", "a2"), skip = 1)
+var_freq4$maf <- var_freq4 %>% select(a1, a2) %>% apply(1, function(z) min(z))
+c4 <- ggplot(var_freq4, aes(maf)) + geom_density(fill = "dodgerblue1", colour = "black", alpha = 0.3)
+c4 + theme_light()
+summary(var_freq4$maf)
+ind_depth4<- read_delim("wolbachia/vcf/wolren_depth.idepth", delim = "\t",
+                         col_names = c("ind", "nsites", "depth"), skip = 1)
+d4 <- ggplot(ind_depth4, aes(depth)) + geom_histogram(fill = "dodgerblue1", colour = "black", alpha = 0.3)
+d4 + theme_light()
+ind_miss4  <- read_delim("wolbachia/vcf/wolren_miss_indiv.imiss", delim = "\t",
+                         col_names = c("ind", "ndata", "nfiltered", "nmiss", "fmiss"), skip = 1)
+e4 <- ggplot(ind_miss4, aes(fmiss)) + geom_histogram(fill = "dodgerblue1", colour = "black", alpha = 0.3)
+e4 + theme_light()
+
 ####plot them all together####
-mean_depth <- ggarrange(a, a1, a2, a3,
-                        labels = c("Wol", "Wol+out", "Wol filtered", "No R"),
-                        ncol = 2, nrow = 2)
-variant_missingness <- ggarrange(b, b1, b2, b3,
-                                 labels = c("Wol", "Wol+out", "Wol filtered", "No R"),
-                                 ncol = 2, nrow = 2)
-minor_allele <- ggarrange(c, c1, c2, c3,
-                          labels = c("Wol", "Wol+out", "Wol filtered", "No R"),
-                          ncol = 2, nrow = 2)
-depth_indiv <- ggarrange(d, d1, d2, d3,
-                         labels = c("Wol", "Wol+out", "Wol filtered", "No R"),
-                         ncol = 2, nrow = 2)
-missingness_indiv <- ggarrange(e, e1, e2, e3,
-                               labels = c("Wol", "Wol+out", "Wol filtered", "No R"),
-                               ncol = 2, nrow = 2)
+mean_depth <- ggarrange(a, a1, a2, a3, a4,
+                        labels = c("Wol", "Wol+out", "Wol filtered", "No R", "Reno"),
+                        ncol = 3, nrow = 2)
+variant_missingness <- ggarrange(b, b1, b2, b3, b4,
+                                 labels = c("Wol", "Wol+out", "Wol filtered", "No R", "Reno"),
+                                 ncol = 3, nrow = 2)
+minor_allele <- ggarrange(c, c1, c2, c3, c4,
+                          labels = c("Wol", "Wol+out", "Wol filtered", "No R", "Reno"),
+                          ncol = 3, nrow = 2)
+depth_indiv <- ggarrange(d, d1, d2, d3, d4,
+                         labels = c("Wol", "Wol+out", "Wol filtered", "No R", "Reno"),
+                         ncol = 3, nrow = 2)
+missingness_indiv <- ggarrange(e, e1, e2, e3, e4,
+                               labels = c("Wol", "Wol+out", "Wol filtered", "No R", "Reno"),
+                               ncol = 3, nrow = 2)
 
 summary(var_depth$mean_depth)

@@ -13,6 +13,7 @@ library("paletteer")
 #This is run in Rstudio (it being an IDE is especially nice for visualizing)
 #Read in VCF
 aciu_vcf <- read.vcfR("wolbachia/wolbachia.filtered.vcf")
+aciu_vcf <- read.vcfR("wolbachia/marshmallow.filtered.vcf")
 
 #Convert to genlight format
 focal_gl <- vcfR2genlight(aciu_vcf)
@@ -20,8 +21,9 @@ focal_gl <- vcfR2genlight(aciu_vcf)
 popmap<-data.frame(id=colnames(aciu_vcf@gt)[2:length(colnames(aciu_vcf@gt))],pop=substr(colnames(aciu_vcf@gt)[2:length(colnames(aciu_vcf@gt))], 1,8))
 #Add population info, setting up the population array
 pop(focal_gl) <- c("ABQ_FY_S", "ABQ_FY_S", "ABQ_FY_S", "MAL_FY_C", "MAL_FY_C", "MAL_FY_C", "MAL_FY_N", "MAL_FY_N", "MAL_FY_N", "RGG_FY_C", "RGG_FY_C", "RGG_FY_C", "RGG_FY_S", "RGG_FY_S", "RGG_FY_S", "SNM_FY_C", "SNM_FY_C", "SNM_FY_C", "SNM_FY_S", "SNM_FY_S", "SNM_FY_S", "TES_FY_C", "TES_FY_C", "TES_FY_C", "TES_FY_N", "TES_FY_N", "TES_FY_N", "TES_FY_S", "TES_FY_S", "TES_FY_S")
+pop(focal_gl) <- c("ABQ_S", "ABQ_S", "ABQ_S", "MAL_C", "MAL_C", "MAL_C", "MAL_N", "MAL_N", "MAL_N", "RGG_C", "RGG_C", "RGG_C", "RGG_S", "RGG_S", "RGG_S", "SLV_O", "SLV_O", "SLV_O", "SNM_C", "SNM_C", "SNM_C", "SNM_S", "SNM_S", "SNM_S", "TES_C", "TES_C", "TES_C", "TES_N", "TES_N", "TES_N", "TES_S", "TES_S", "TES_S", "MAL_M", "MAL_M", "MAL_M", "SLV_M", "SLV_M", "SLV_M", "SNM_M", "SNM_M", "SNM_M", "TES_M", "TES_M", "TES_M")
 
-popfocal<- read.csv("wolbachia/popmap.csv", header=TRUE)
+popfocal<- read.csv("wolbachia/popmap_msh.csv", header=TRUE)
 pop(focal_gl) <- popfocal$pop
 
 #run pca#
@@ -36,10 +38,9 @@ barplot(pca$eig/sum(pca$eig), main="eigenvalues",
 scatter(pca, posi = "none")
 # Create named color vector for the legend
 
-legend_colors <- c("#009E73", "#E69F00", "#56B4E9", "#999999", "deeppink4",
-                            "#F0E442", "#0072B2", "#D55E00", "#000000", "#CC79A7")
+legend_colors <- c("#009E73", "#E69F00", "#0072B2", "#CC79A7")
                             
-names(legend_colors) <- c("ABQ-S", "MAL-C", "MAL-N", "RGG-C", "RGG-S", "SNM-C", "SNM-S", "TES-C", "TES-N", "TES-S")     
+names(legend_colors) <- c("S", "C", "N", "M")     
 #levels: 
 
 popmap$pop=as.factor(popmap$pop)

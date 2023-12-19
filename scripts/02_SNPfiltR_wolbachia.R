@@ -11,13 +11,16 @@ library("vcfR")
 ####Read in files####
 #VCF file
 vcfR <- read.vcfR("wolbachia/wolbachia.snps.vcf")
+vcfR <- read.vcfR("wolbachia/wolbachia.reno.vcf")
+vcfR <- read.vcfR("wolbachia/marshmallow.snps.vcf")
 
 #normal after filtering: 21,507
 #No R after filtering: 17,688
+#marshmallow: 20,685
 
 #populations map file
-#popmap<-data.frame(id=colnames(vcfR@gt)[2:length(colnames(vcfR@gt))],pop=substr(colnames(vcfR@gt)[2:length(colnames(vcfR@gt))], 7,8))
-popmap <- read.csv("wolbachia/popmap.csv")
+popmap<-data.frame(id=colnames(vcfR@gt)[2:length(colnames(vcfR@gt))],pop=substr(colnames(vcfR@gt)[2:length(colnames(vcfR@gt))], 1,8))
+popmap <- read.csv("wolbachia/popmap_ren.csv")
 
 ####Implement quality filters####
 #that don’t involve missing data This is because removing low data samples will alter percentage/quantile based missing data cutoffs, so we wait to implement those until after deciding on our final set of samples for downstream analysis
@@ -104,7 +107,7 @@ heatmap.bp(gq, rlabels = FALSE)
 
 ####write out vcf files for downstream analyses####
 #write out vcf with all SNPs
-vcfR::write.vcf(vcfR, "wolbachia.filtered.vcf.gz")
+vcfR::write.vcf(vcfR, "marshmallow.filtered.vcf")
 #linkage filter vcf to thin SNPs to one per 500bp
 vcfR.thin<-distance_thin(vcfR, min.distance = 500)
 #write out thinned vcf

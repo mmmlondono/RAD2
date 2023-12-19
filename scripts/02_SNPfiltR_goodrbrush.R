@@ -13,7 +13,7 @@ vcfR <- read.vcfR("good_rbrush/populations.snps.vcf")
 vcfR <- read.vcfR("good_rbrush/2goods/populations.snps.vcf") #(2)
 vcfR <- read.vcfR("good_rbrush/3goods/populations.snps.vcf") #(3)
 #populations map file
-popmap<-data.frame(id=colnames(vcfR@gt)[2:length(colnames(vcfR@gt))],pop=substr(colnames(vcfR@gt)[2:length(colnames(vcfR@gt))], 7,8))
+popmap<-data.frame(id=colnames(vcfR@gt)[2:length(colnames(vcfR@gt))],pop=substr(colnames(vcfR@gt)[2:length(colnames(vcfR@gt))], 1,3))
 #popmap <- read.csv("rbrush/erna/popmap.csv")
 
 ####Implement quality filters####
