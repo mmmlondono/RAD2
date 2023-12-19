@@ -1,0 +1,63 @@
+SNM edge
+
+Starting ln(likelihood) with 0 migration events: -688.115 
+Exiting ln(likelihood) with 0 migration events: -688.115 
+
+Starting ln(likelihood) with 0 migration events: -688.115 
+Exiting ln(likelihood) with 1 migration events: 404.891 
+
+Starting ln(likelihood) with 0 migration events: 403.374 
+Exiting ln(likelihood) with 2 migration events: 405.351 
+
+Starting ln(likelihood) with 0 migration events: -61.9136 
+Exiting ln(likelihood) with 3 migration events: 404.536 
+
+Starting ln(likelihood) with 0 migration events: 403.374 
+Exiting ln(likelihood) with 4 migration events: 404.635 
+
+Difference between 0 and 1 migration event: 404.891 - (-688.115) = 1092.006
+Difference between 1 and 2 migration events: 405.351 - 404.891 = 0.46
+Difference between 2 and 3 migration events: 404.536 - (-61.9136) = 466.4496
+Difference between 3 and 4 migration events: 404.635 - 403.374 = 1.261
+
+TES edge
+
+Starting ln(likelihood) with 0 migration events: 403.374 
+Exiting ln(likelihood) with 0 migration events: 403.374
+
+Starting ln(likelihood) with 0 migration events: 403.374 
+Exiting ln(likelihood) with 1 migration events: 404.891 
+
+Starting ln(likelihood) with 0 migration events: -110.398 
+Exiting ln(likelihood) with 2 migration events: 405.934 
+
+Starting ln(likelihood) with 0 migration events: 403.374 
+Exiting ln(likelihood) with 3 migration events: 404.637 
+
+Starting ln(likelihood) with 0 migration events: 403.374 
+Exiting ln(likelihood) with 4 migration events: 404.419 
+
+Difference between 0 and 1 migration event: 404.891 - 403.374 = 1.517
+Difference between 1 and 2 migration events: 405.934 - 404.891 = 1.043
+Difference between 2 and 3 migration events: 404.637 - (-110.398) = 515.035
+Difference between 3 and 4 migration events: 404.419 - 403.374 = 1.045
+
+SLV edge
+
+Starting ln(likelihood) with 0 migration events: 403.374 
+Exiting ln(likelihood) with 1 migration events: 404.891 
+
+Starting ln(likelihood) with 0 migration events: 403.374 
+Exiting ln(likelihood) with 2 migration events: 405.351 
+
+Starting ln(likelihood) with 0 migration events: -110.398 
+Exiting ln(likelihood) with 3 migration events: 404.639
+
+Starting ln(likelihood) with 0 migration events: 403.374 
+Exiting ln(likelihood) with 4 migration events: 404.479
+
+Difference between 0 and 1 migration event: 404.891 - 403.374 = 1.517
+Difference between 1 and 2 migration events: 405.351 - 404.891 = 0.460
+Difference between 2 and 3 migration events: 404.639 - (-110.398) = 515.037
+Difference between 3 and 4 migration events: 404.479 - 404.639 = -0.160
+

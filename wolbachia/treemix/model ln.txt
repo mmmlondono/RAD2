@@ -1,0 +1,25 @@
+Unsupervised
+
+tarting ln(likelihood) with 0 migration events: 403.374
+Exiting ln(likelihood) with 0 migration events: 403.374
+
+Starting ln(likelihood) with 0 migration events: 403.374
+Exiting ln(likelihood) with 1 migration events: 404.891
+
+Starting ln(likelihood) with 0 migration events: 403.374
+Exiting ln(likelihood) with 2 migration events: 405.934
+
+Starting ln(likelihood) with 0 migration events: 403.374
+Exiting ln(likelihood) with 3 migration events: 404.639
+
+Starting ln(likelihood) with 0 migration events: 403.374
+Exiting ln(likelihood) with 4 migration events: 404.419
+
+Starting ln(likelihood) with 0 migration events: 403.374
+Exiting ln(likelihood) with 5 migration events: 404.55
+
+Difference between 0 and 1 migration event: 404.891 - 403.374 = 1.517
+Difference between 1 and 2 migration events: 405.934 - 404.891 = 1.043
+Difference between 2 and 3 migration events: 404.639 - 405.934 = -1.295
+Difference between 3 and 4 migration events: 404.419 - 404.639 = -0.22
+Difference between 4 and 5 migration events: 404.55 - 404.419 = 0.131
