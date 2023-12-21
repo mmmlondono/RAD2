@@ -1,0 +1,23 @@
+Starting ln(likelihood) with 0 migration events: 738.75 
+Exiting ln(likelihood) with 0 migration events: 738.75 
+
+Starting ln(likelihood) with 0 migration events: 738.75 
+Exiting ln(likelihood) with 1 migration events: 739.444 
+
+Starting ln(likelihood) with 0 migration events: 738.75 
+Exiting ln(likelihood) with 2 migration events: 745.818 
+
+Starting ln(likelihood) with 0 migration events: 738.75 
+Exiting ln(likelihood) with 3 migration events: 734.451 
+
+Starting ln(likelihood) with 0 migration events: 738.75 
+Exiting ln(likelihood) with 4 migration events: 737.619 
+
+Starting ln(likelihood) with 0 migration events: 738.75 
+Exiting ln(likelihood) with 5 migration events: 752.943 
+
+Difference between 0 and 1 migration event: 739.444 - 738.75 = 0.694
+Difference between 1 and 2 migration events: 745.818 - 739.444 = 6.374
+Difference between 2 and 3 migration events: 734.451 - 745.818 = -11.367
+Difference between 3 and 4 migration events: 737.619 - 734.451 = 3.168
+Difference between 4 and 5 migration events: 752.943 - 737.619 = 15.324
