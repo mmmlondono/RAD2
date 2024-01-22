@@ -25,8 +25,10 @@ vcf2geno("good_rbrush/rbrush_good.filtered.vcf", output = "good_rbrush/rbrush_go
 goodrbrush_snmf = snmf("good_rbrush/rbrush_good.geno", ploidy=2, 
                      K = 1:10, alpha = 10, project = "new", entropy = T, repetitions = 50)
 
-#so save and load#
+#so save#
 saveRDS(goodrbrush_snmf, file = "goodrbrush_snmf")
+#and load#
+goodrbrush_snmf<-readRDS(file = "aciurina/aciurina2/snmf/aciurina_snmf")
 
 # plot to decide optimal K, although don't put too much stock in k values
 plot(aciurina_snmf, cex = 1.2, col = "lightblue", pch = 19)
