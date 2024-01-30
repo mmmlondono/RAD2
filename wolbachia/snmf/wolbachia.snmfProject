@@ -1,5 +1,5 @@
 new("snmfProject", snmfProject.file = "wolbachia.snmfProject", 
-    projDir = "/Users/manuelalondono/RAD2-main/wolbachia/snmf/", 
+    projDir = "/Users/martinson_lab/Documents/RAD2/wolbachia/snmf/", 
     snmfDir = "wolbachia.snmf/", input.file = "wolbachia.geno", 
     runs = list(), K = c(1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 
     10L, 1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L, 1L, 2L, 3L, 
@@ -288,5 +288,5 @@ new("snmfProject", snmfProject.file = "wolbachia.snmfProject",
     "K6/run50/wolbachia_r50.6.snmfClass", "K7/run50/wolbachia_r50.7.snmfClass", 
     "K8/run50/wolbachia_r50.8.snmfClass", "K9/run50/wolbachia_r50.9.snmfClass", 
     "K10/run50/wolbachia_r50.10.snmfClass"), n = 30L, L = 21507L, 
-    creationTime = structure(1699447400.18329, class = c("POSIXct", 
+    creationTime = structure(1705949308.47343, class = c("POSIXct", 
     "POSIXt")))

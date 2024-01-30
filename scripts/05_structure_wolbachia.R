@@ -28,9 +28,9 @@ wolbachia_genlight <- vcfR2genlight(wolbachia_vcf)
 
 ####create snmf file####
 #takes for ever#
-vcf2geno("wolbachia/marshmallow.filtered.vcf", output = "wolbachia/snmf/marshmallow.geno")
+vcf2geno("wolbachia/wolbachia.filtered.vcf", output = "wolbachia/snmf/wolbachia.geno")
 
-good2rbrush_snmf = snmf("wolbachia/snmf/marshmallow.geno", ploidy=2, 
+good2rbrush_snmf = snmf("wolbachia/snmf/wolbachia.geno", ploidy=2, 
                         K = 1:10, alpha = 10, project = "new", entropy = T, repetitions = 50)
 
 #so save and load#
@@ -41,10 +41,11 @@ wolbachia_snmf<-readRDS(file = "wolbachia/snmf/wolbachia_snmf")
 # plot to decide optimal K, although don't put too much stock in k values
 plot(wolbachia_snmf, cex = 1.2, col = "lightblue", pch = 19)
 
-best_run <- which.min(cross.entropy(wolbachia_snmf, K = 5))
+best_run <- which.min(cross.entropy(wolbachia_snmf, K = 3))
+
 #select K ####
-q_mat <- Q(wolbachia_snmf, K = 5, run = best_run)
-colnames(q_mat) <- paste0("P", 1:5)
+q_mat <- Q(wolbachia_snmf, K = 3, run = best_run)
+colnames(q_mat) <- paste0("P", 1:3)
 
 popss <- read.csv("wolbachia/snmf/popmap_order.csv")
 
@@ -64,7 +65,7 @@ q_df_prates <- q_df_long %>%
   # this ensures that the factor levels for the individuals follow the ordering we just did. This is necessary for plotting
   mutate(individual = forcats::fct_inorder(factor(individual)))
 
-q_palette <- c("#E69F00","#009E73","#0072B2","#CC79A7","#999999")
+q_palette <- c("#009E73","#0072B2","#E69F00")
 #q_palette  <- c("#000000", "#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 #"gold", "#bebada", "#8dd3c7", "#bc80bd", "darkblue", "#80b1d3", "#fdb462", "#b3de69", "#fccde5", "#8dd3c7","#fb8072"
 

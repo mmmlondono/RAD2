@@ -11,6 +11,7 @@ library("vcfR")
 ####Read in files####
 #VCF file
 vcfR <- read.vcfR("wolbachia/wolbachia.snps.vcf")
+vcfR <- read.vcfR("wolbachia/wolbachia_out.vcf")
 vcfR <- read.vcfR("wolbachia/wolbachia.reno.vcf")
 vcfR <- read.vcfR("wolbachia/marshmallow.snps.vcf")
 
